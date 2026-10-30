@@ -27,15 +27,17 @@ public class AdvanceFortuneModifier extends Modifier implements EnchantmentModif
     private static final Random RANDOM = new Random();
 
     private static final List<OreDrop> EXTRA_DROPS = List.of(
-            new OreDrop(Items.NETHERITE_SCRAP, 0.005),  // 0.5%
-            new OreDrop(Items.EMERALD, 0.01),           // 1%
-            new OreDrop(Items.DIAMOND, 0.015),          // 1.5%
-            new OreDrop(Items.RAW_GOLD, 0.03),          // 3%
-            new OreDrop(Items.REDSTONE, 0.05),          // 5%
-            new OreDrop(Items.AMETHYST_SHARD, 0.06),    // 6%
-            new OreDrop(Items.RAW_IRON, 0.08),          // 8%
-            new OreDrop(Items.COAL, 0.10),              // 10%
-            new OreDrop(Items.RAW_COPPER, 0.12)         // 12%
+
+            new OreDrop(Items.NETHERITE_SCRAP, 0.01),
+            new OreDrop(Items.EMERALD, 0.02),
+            new OreDrop(Items.DIAMOND, 0.03),
+            new OreDrop(Items.RAW_GOLD, 0.06),
+            new OreDrop(Items.REDSTONE, 0.10),
+            new OreDrop(Items.AMETHYST_SHARD, 0.12),
+            new OreDrop(Items.RAW_IRON, 0.16),
+            new OreDrop(Items.COAL, 0.20),
+            new OreDrop(Items.RAW_COPPER, 0.24)
+
     );
 
     @Override
@@ -49,7 +51,7 @@ public class AdvanceFortuneModifier extends Modifier implements EnchantmentModif
     public int updateEnchantmentLevel(IToolStackView tool, ModifierEntry modifier,
                                       Holder<Enchantment> enchantment, int level) {
         if (enchantment.is(Enchantments.FORTUNE)) {
-            // 词条等级 = 额外时运等级
+
             return level + modifier.getLevel();
         }
         return level;
@@ -66,12 +68,10 @@ public class AdvanceFortuneModifier extends Modifier implements EnchantmentModif
     @Override
     public void finishHarvest(IToolStackView tool, ModifierEntry modifier,
                               ToolHarvestContext context, int harvested) {
-        // 没有破坏任何方块，直接返回
+
         if (harvested <= 0) {
             return;
         }
-
-        // 核心判定：只有方块在 c:ores 标签中才生效
 
         if (!context.getState().is(Tags.Blocks.ORES)) {
             return;
@@ -83,8 +83,9 @@ public class AdvanceFortuneModifier extends Modifier implements EnchantmentModif
         }
 
         int modifierLevel = modifier.getLevel();
+
         for (OreDrop drop : EXTRA_DROPS) {
-            // 概率 = 基础概率 × 词条等级，等级越高越容易触发
+
             if (RANDOM.nextDouble() < drop.baseChance() * modifierLevel) {
                 Block.popResource(level, context.getPos(), new ItemStack(drop.item()));
             }

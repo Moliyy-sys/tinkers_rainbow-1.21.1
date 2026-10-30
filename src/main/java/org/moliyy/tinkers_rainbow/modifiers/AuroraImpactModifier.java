@@ -20,17 +20,17 @@ public class AuroraImpactModifier extends Modifier
         hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE, ModifierHooks.MELEE_HIT);
     }
 
-    // ---------- 额外伤害 ----------
+
 
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier,
                                 ToolAttackContext context, float baseDamage, float damage) {
-        // 额外伤害 = 20% + (词条等级 × 10%)
+
         float bonusRatio = 0.2F + (modifier.getLevel() * 0.1F);
         return damage * (1.0F + bonusRatio);
     }
 
-    // ---------- 眩晕 ----------
+
 
     @Override
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier,
@@ -40,14 +40,14 @@ public class AuroraImpactModifier extends Modifier
             return;
         }
 
-        // 1.5 秒 = 30 tick；amplifier=0，隐藏粒子和图标
+
         target.addEffect(new MobEffectInstance(
                 RainbowEffects.AURORA_STUN,
-                30,     // duration
-                0,      // amplifier
-                false,  // ambient
-                false,  // visible（不显示粒子）
-                false   // showIcon（不显示图标）
+                30,
+                0,
+                false,
+                false,
+                false
         ));
     }
 }

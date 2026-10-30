@@ -41,6 +41,24 @@ public class RainbowModifiers {
     public static StaticModifier<Modifier> onsen =
             MODIFIERS.register("onsen", OnsenModifier::new);
 
+    public static final StaticModifier<MintIceCreamModifier> mint_ice_cream =
+            MODIFIERS.register("mint_ice_cream", MintIceCreamModifier::new);
+
+    public static final StaticModifier<HonorAndFaithModifier> honor_and_faith =
+            MODIFIERS.register("honor_and_faith", HonorAndFaithModifier::new);
+
+    public static final StaticModifier<RepairCartModifier> repair_cart =
+            MODIFIERS.register("repair_cart", RepairCartModifier::new);
+
+    public static final StaticModifier<SupportSoundWaveModifier> support_sound_wave =
+            MODIFIERS.register("support_sound_wave", SupportSoundWaveModifier::new);
+
+    public static final StaticModifier<CheesyBurgerModifier> cheesy_burger =
+            MODIFIERS.register("cheesy_burger", CheesyBurgerModifier::new);
+
+    public static final StaticModifier<EdictOfInvestigationModifier> edict_of_investigation =
+            MODIFIERS.register("edict_of_investigation", EdictOfInvestigationModifier::new);
+
     public RainbowModifiers() {
     }
 
