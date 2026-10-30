@@ -63,6 +63,5 @@ public class RainbowItems {
 
     public static final DeferredItem<BlockItem> BLUE_STEEL_DEBRIS_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_debris", RainbowBlocks.BLUE_STEEL_DEBRIS);
-    public static final DeferredItem<BlockItem> BLUE_STEEL_CRATE_ITEM =
-            ITEMS.registerSimpleBlockItem("blue_steel_crate", RainbowBlocks.BLUE_STEEL_CRATE);
+
 }

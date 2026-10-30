@@ -41,7 +41,6 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(RainbowBlocks.BLUE_STEEL_BLOCK.get());
             dropSelf(RainbowBlocks.RAW_BLUE_STEEL_BLOCK.get());
             dropSelf(RainbowBlocks.BLUE_STEEL_DEBRIS.get());
-            dropSelf(RainbowBlocks.BLUE_STEEL_CRATE.get());
         }
 
         @Override

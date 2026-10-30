@@ -48,7 +48,5 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         withExistingParent("blue_steel_debris", modLoc("block/blue_steel_debris"));
 
-        withExistingParent("blue_steel_crate", modLoc("block/blue_steel_crate"));
-
     }
 }

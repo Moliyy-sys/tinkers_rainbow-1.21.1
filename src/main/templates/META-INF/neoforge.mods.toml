@@ -39,7 +39,7 @@ displayName="TinkersRainbow" #mandatory
 logoFile="tinkers_rainbow.png" #optional
 
 # A text field displayed in the mod UI
-credits="An unofficial Tinkers' Construct 3 addon for 1.21.1 NeoForge" #optional
+credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
 authors="Moliyy-sys"

@@ -45,10 +45,4 @@ public class RainbowBlocks {
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.NETHERITE_BLOCK)));
 
-    public static final DeferredBlock<Block> BLUE_STEEL_CRATE =
-            BLOCKS.registerSimpleBlock("blue_steel_crate",
-                    BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.WOOD)
-                            .strength(2.5F, 2.5F)
-                            .sound(SoundType.WOOD));
 }

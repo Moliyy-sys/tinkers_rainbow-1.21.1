@@ -78,7 +78,6 @@ public class TinkersRainbow {
         CREATIVE_MODE_TABS.register(modEventBus);
         RainbowModifiers.init(modEventBus);
 
-
         NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);

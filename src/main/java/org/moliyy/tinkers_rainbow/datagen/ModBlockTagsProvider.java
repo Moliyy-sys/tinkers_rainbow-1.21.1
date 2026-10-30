@@ -30,9 +30,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(RainbowBlocks.RAW_BLUE_STEEL_BLOCK.get())
                 .add(RainbowBlocks.BLUE_STEEL_DEBRIS.get());
 
-        tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(RainbowBlocks.BLUE_STEEL_CRATE.get());
-
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(RainbowBlocks.BLUE_STEEL_ORE.get())
                 .add(RainbowBlocks.BLUE_STEEL_DEEPSLATE_ORE.get())
