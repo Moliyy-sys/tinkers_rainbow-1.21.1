@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "amount": 800, "fluid": "tconstruct:ichor" },
+    { "amount": 90, "fluid": "tconstruct:molten_netherite" },
+    { "amount": 270, "fluid": "tinkers_rainbow:molten_gene_metal" }
+  ],
+  "result": { "amount": 270, "fluid": "tinkers_rainbow:molten_himari" },
+  "temperature": 1600
+}

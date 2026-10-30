@@ -1,0 +1,7 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": { "item": "tinkers_rainbow:gene_metal" },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkers_rainbow:gene_metal"
+}

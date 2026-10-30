@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "amount": 90, "fluid": "tconstruct:earth_slime"},
+    { "amount": 270, "fluid": "tconstruct:molten_obsidian" },
+    { "amount": 270, "fluid": "tinkers_rainbow:molten_blue_steel" }
+  ],
+  "result": { "amount": 270, "fluid": "tinkers_rainbow:molten_gene_metal" },
+  "temperature": 800
+}

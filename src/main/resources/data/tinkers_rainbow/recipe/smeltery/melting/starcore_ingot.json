@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:starcore_ingot"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_starcore_ingot",
+    "amount": 90
+  },
+  "temperature": 800,
+  "time": 60
+}

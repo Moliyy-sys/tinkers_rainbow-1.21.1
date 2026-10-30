@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tinkers_rainbow:block/blue_steel_debris_top",
+    "side": "tinkers_rainbow:block/blue_steel_debris_side"
+  }
+}

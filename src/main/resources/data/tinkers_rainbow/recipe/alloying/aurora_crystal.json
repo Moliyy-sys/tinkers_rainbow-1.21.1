@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "amount": 270, "fluid": "tconstruct:molten_copper"},
+    { "amount": 270, "fluid": "tconstruct:molten_glass" },
+    { "amount": 90, "fluid": "tinkers_rainbow:molten_blue_steel" }
+  ],
+  "result": { "amount": 90, "fluid": "tinkers_rainbow:molten_aurora_crystal" },
+  "temperature": 800
+}

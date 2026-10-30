@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "amount": 270, "fluid": "tconstruct:molten_diamond" },
+    { "amount": 90, "fluid": "tconstruct:molten_knightslime" },
+    { "amount": 270, "fluid": "tinkers_rainbow:molten_gene_metal" }
+  ],
+  "result": { "amount": 270, "fluid": "tinkers_rainbow:molten_nodoka" },
+  "temperature": 1600
+}

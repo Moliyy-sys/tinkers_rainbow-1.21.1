@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "tinkers_rainbow:raw_blue_steel"
+  },
+  "result": {
+    "id": "tinkers_rainbow:blue_steel"
+  }
+}

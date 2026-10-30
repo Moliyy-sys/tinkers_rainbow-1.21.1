@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:himari_ingot"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_himari",
+    "amount": 90
+  },
+  "temperature": 1600,
+  "time": 60
+}

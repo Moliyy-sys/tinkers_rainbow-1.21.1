@@ -1,0 +1,108 @@
+{
+  "itemGroup.tinkers_rainbow": "Tinkers' Rainbow",
+
+  "tinkers_rainbow.configuration.title": "Tinkers' Rainbow Configs",
+  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml": "Tinkers' Rainbow Configs",
+  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml.title": "Tinkers' Rainbow Configs",
+  "tinkers_rainbow.configuration.items": "Item List",
+  "tinkers_rainbow.configuration.logDirtBlock": "Log Dirt Block",
+  "tinkers_rainbow.configuration.magicNumberIntroduction": "Magic Number Text",
+  "tinkers_rainbow.configuration.magicNumber": "Magic Number",
+  "tinkers_rainbow.configuration.showStrengthBonus": "\"Witness My Strength!\" attack multiplier (1.05 = +5%)",
+
+  "material.tinkers_rainbow.blue_steel": "Blue Steel",
+  "material.tinkers_rainbow.gene_metal": "Gene Metal",
+  "material.tinkers_rainbow.aurora_crystal": "Aurora Crystal",
+  "material.tinkers_rainbow.starcore_ingot": "Starcore",
+  "material.tinkers_rainbow.wakamo_ingot": "Wakamo Ingot",
+  "material.tinkers_rainbow.sumire_ingot": "Sumire Ingot",
+  "material.tinkers_rainbow.himari_ingot": "Himari Ingot",
+  "material.tinkers_rainbow.nodoka_ingot": "Nodoka Ingot",
+
+  "modifier.tinkers_rainbow.advance_fortune": "Advanced Fortune",
+  "modifier.tinkers_rainbow.advance_fortune.flavor": "Bang bang kira kira! Alice got ores!",
+  "modifier.tinkers_rainbow.advance_fortune.description": "Provides vanilla Fortune and drops extra rare items when mining ores.",
+
+  "modifier.tinkers_rainbow.advance_looting": "Advanced Looting",
+  "modifier.tinkers_rainbow.advance_looting.flavor": "Bang bang kira kira! Alice got loot!",
+  "modifier.tinkers_rainbow.advance_looting.description": "Provides vanilla Looting and may drop extra items like rotten flesh, bones, and gunpowder.",
+
+  "modifier.tinkers_rainbow.crimson_burst": "Crimson Burst",
+  "modifier.tinkers_rainbow.crimson_burst.flavor": "The original fes!",
+  "modifier.tinkers_rainbow.crimson_burst.description": "Accumulates damage dealt to enemies. At 5 points, detonates and deals damage equal to the accumulated damage.",
+
+  "modifier.tinkers_rainbow.aurora_impact": "Aurora Impact",
+  "modifier.tinkers_rainbow.aurora_impact.flavor": "Modifier function",
+  "modifier.tinkers_rainbow.aurora_impact.description": "Deals an additional 20% + (level * 10%) damage on hit and stuns the target for 1.5 seconds.",
+
+  "modifier.tinkers_rainbow.aurora_protection": "Aurora Protection",
+  "modifier.tinkers_rainbow.aurora_protection.flavor": "Modifier function",
+  "modifier.tinkers_rainbow.aurora_protection.description": "Once per minute, consumes durability to block one damage instance. Ineffective without durability.",
+
+  "modifier.tinkers_rainbow.star_source": "Star Source",
+  "modifier.tinkers_rainbow.star_source.flavor": "Modifier function",
+  "modifier.tinkers_rainbow.star_source.description": "Restores durability at night. Can consume durability to deal 1.2 * level extra damage.",
+
+  "modifier.tinkers_rainbow.show_strength": "Witness My Strength!",
+  "modifier.tinkers_rainbow.show_strength.flavor": "Modifier function",
+  "modifier.tinkers_rainbow.show_strength.description": "Increases attack power. Multiplier is configurable, default 105%.",
+
+  "modifier.tinkers_rainbow.dash_shoot": "Dash and Shoot",
+  "modifier.tinkers_rainbow.dash_shoot.flavor": "Modifier function",
+  "modifier.tinkers_rainbow.dash_shoot.description": "Right-click to dash in a triangle, dealing triple damage to enemies in the path. 10s cooldown.",
+
+  "modifier.tinkers_rainbow.onsen": "Hot Spring Village No.227, Now Open!",
+  "modifier.tinkers_rainbow.onsen.flavor": "Modifier function",
+  "modifier.tinkers_rainbow.onsen.description": "Every 8 seconds, randomly triggers one hot spring dish that restores a portion of max health.",
+
+  "modifier.tinkers_rainbow.gene_boost": "Gene Boost",
+  "modifier.tinkers_rainbow.gene_boost.flavor": "Gene Ascension!",
+  "modifier.tinkers_rainbow.gene_boost.description": "Increases max health when on armor, and increases base attack damage when on a weapon.",
+
+  "effect.tinkers_rainbow.aurora_stun": "Aurora Stun",
+  "effect.tinkers_rainbow.crimson_burst_cooldown": "Crimson Burst Cooldown",
+
+  "message.tinkers_rainbow.onsen.serve": "Order up!",
+  "message.tinkers_rainbow.onsen.food.mantou": "Onsen Manju",
+  "message.tinkers_rainbow.onsen.food.rod": "Thick Stick",
+  "message.tinkers_rainbow.onsen.food.milk": "Milk",
+
+  "fluid.tinkers_rainbow.molten_blue_steel": "Molten Blue Steel",
+  "fluid.tinkers_rainbow.molten_gene_metal": "Molten Gene Metal",
+  "fluid.tinkers_rainbow.molten_aurora_crystal": "Molten Aurora Crystal",
+  "fluid.tinkers_rainbow.molten_starcore_ingot": "Molten Starcore",
+  "fluid.tinkers_rainbow.molten_wakamo": "Molten Wakamo",
+  "fluid.tinkers_rainbow.molten_sumire": "Molten Sumire",
+  "fluid.tinkers_rainbow.molten_himari": "Molten Himari",
+  "fluid.tinkers_rainbow.molten_nodoka": "Molten Nodoka",
+
+  "item.tinkers_rainbow.blue_steel": "Blue Steel Ingot",
+  "item.tinkers_rainbow.blue_steel_nugget": "Blue Steel Nugget",
+  "item.tinkers_rainbow.raw_blue_steel": "Raw Blue Steel",
+  "item.tinkers_rainbow.blue_steel_heart_fragments": "Blue Steel Heart Fragment",
+  "item.tinkers_rainbow.blue_steel_scrap": "Blue Steel Scrap",
+  "item.tinkers_rainbow.gene_metal": "Gene Metal",
+  "item.tinkers_rainbow.gene_metal_nugget": "Gene Metal Nugget",
+  "item.tinkers_rainbow.aurora_crystal": "Aurora Crystal",
+  "item.tinkers_rainbow.starcore_ingot": "Starcore Ingot",
+  "item.tinkers_rainbow.wakamo_ingot": "Wakamo Ingot",
+  "item.tinkers_rainbow.sumire_ingot": "Sumire Ingot",
+  "item.tinkers_rainbow.himari_ingot": "Himari Ingot",
+  "item.tinkers_rainbow.nodoka_ingot": "Nodoka Ingot",
+
+  "item.tinkers_rainbow.molten_blue_steel_bucket": "Molten Blue Steel Bucket",
+  "item.tinkers_rainbow.molten_gene_metal_bucket": "Molten Gene Metal Bucket",
+  "item.tinkers_rainbow.molten_aurora_crystal_bucket": "Molten Aurora Crystal Bucket",
+  "item.tinkers_rainbow.molten_starcore_ingot_bucket": "Molten Starcore Bucket",
+  "item.tinkers_rainbow.molten_wakamo_bucket": "Molten Wakamo Bucket",
+  "item.tinkers_rainbow.molten_sumire_bucket": "Molten Sumire Bucket",
+  "item.tinkers_rainbow.molten_himari_bucket": "Molten Himari Bucket",
+  "item.tinkers_rainbow.molten_nodoka_bucket": "Molten Nodoka Bucket",
+
+  "block.tinkers_rainbow.blue_steel_ore": "Blue Steel Ore",
+  "block.tinkers_rainbow.blue_steel_deepslate_ore": "Deepslate Blue Steel Ore",
+  "block.tinkers_rainbow.blue_steel_block": "Block of Blue Steel",
+  "block.tinkers_rainbow.raw_blue_steel_block": "Block of Raw Blue Steel",
+  "block.tinkers_rainbow.blue_steel_debris": "Blue Steel Debris",
+  "block.tinkers_rainbow.blue_steel_crate": "Blue Steel Crate"
+}

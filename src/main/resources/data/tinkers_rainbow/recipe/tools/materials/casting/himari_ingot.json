@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_himari"
+  },
+  "output": "tinkers_rainbow:himari_ingot",
+  "temperature": 1600
+}

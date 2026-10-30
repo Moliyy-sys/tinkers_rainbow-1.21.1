@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:gene_metal"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_gene_metal",
+    "amount": 90
+  },
+  "temperature": 800,
+  "time": 60
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tinkers_rainbow:gene_metal"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "tinkers_rainbow:gene_metal_nugget"
+  }
+}

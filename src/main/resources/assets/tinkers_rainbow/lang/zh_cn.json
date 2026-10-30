@@ -1,0 +1,108 @@
+{
+  "itemGroup.tinkers_rainbow": "匠魂彩虹",
+
+  "tinkers_rainbow.configuration.title": "匠魂彩虹 配置",
+  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml": "匠魂彩虹 通用配置",
+  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml.title": "匠魂彩虹 通用配置",
+  "tinkers_rainbow.configuration.items": "物品列表",
+  "tinkers_rainbow.configuration.logDirtBlock": "记录泥土方块",
+  "tinkers_rainbow.configuration.magicNumberIntroduction": "魔法数字文本",
+  "tinkers_rainbow.configuration.magicNumber": "魔法数字",
+  "tinkers_rainbow.configuration.showStrengthBonus": "“见识我的实力吧”攻击力加成倍率（1.05 = 提升 5%）",
+
+  "material.tinkers_rainbow.blue_steel": "蓝钢",
+  "material.tinkers_rainbow.gene_metal": "基因金属",
+  "material.tinkers_rainbow.aurora_crystal": "极光水晶",
+  "material.tinkers_rainbow.starcore_ingot": "星夜核心",
+  "material.tinkers_rainbow.wakamo_ingot": "若藻锭",
+  "material.tinkers_rainbow.sumire_ingot": "堇锭",
+  "material.tinkers_rainbow.himari_ingot": "日鞠锭",
+  "material.tinkers_rainbow.nodoka_ingot": "和香锭",
+
+  "modifier.tinkers_rainbow.advance_fortune": "高级时运",
+  "modifier.tinkers_rainbow.advance_fortune.flavor": "邦邦咔邦！爱丽丝获得矿石！",
+  "modifier.tinkers_rainbow.advance_fortune.description": "提供原版时运效果，并且挖掘矿石能够额外掉落稀有度由高到低：下界合金碎片，绿宝石，钻石，粗金，红石，紫水晶，粗铁，煤炭，粗铜。",
+
+  "modifier.tinkers_rainbow.advance_looting": "高级抢夺",
+  "modifier.tinkers_rainbow.advance_looting.flavor": "邦邦咔邦！爱丽丝获得战利品！",
+  "modifier.tinkers_rainbow.advance_looting.description": "提供原版抢夺效果，并有机会额外掉落腐肉、骨头、火药等物品。",
+
+  "modifier.tinkers_rainbow.crimson_burst": "深红爆发",
+  "modifier.tinkers_rainbow.crimson_burst.flavor": "最初的fes！",
+  "modifier.tinkers_rainbow.crimson_burst.description": "攻击敌人时会积攒点数以及敌人因此减少的血量伤害，点数积攒为5点时会引爆，清空点数，造成这期间造成的伤害值的伤害。",
+
+  "modifier.tinkers_rainbow.aurora_impact": "极光冲击",
+  "modifier.tinkers_rainbow.aurora_impact.flavor": "词条功能",
+  "modifier.tinkers_rainbow.aurora_impact.description": "击中敌人时会附赠20%+（词条等级*10%）的额外伤害，并且眩晕1.5秒。",
+
+  "modifier.tinkers_rainbow.aurora_protection": "极光保护",
+  "modifier.tinkers_rainbow.aurora_protection.flavor": "词条功能",
+  "modifier.tinkers_rainbow.aurora_protection.description": "每分钟可以消耗耐久抵挡一次伤害，无耐久时失效。",
+
+  "modifier.tinkers_rainbow.star_source": "星源",
+  "modifier.tinkers_rainbow.star_source.flavor": "词条功能",
+  "modifier.tinkers_rainbow.star_source.description": "仅在夜晚时恢复耐久，白天与晚上时可以消耗耐久造成1.2*词条等级伤害，每次攻击消耗耐久*词条等级倍。",
+
+  "modifier.tinkers_rainbow.show_strength": "见识我的实力吧",
+  "modifier.tinkers_rainbow.show_strength.flavor": "词条功能",
+  "modifier.tinkers_rainbow.show_strength.description": "提升攻击力，倍率可通过配置更改，默认 105%。",
+
+  "modifier.tinkers_rainbow.dash_shoot": "冲刺，射击",
+  "modifier.tinkers_rainbow.dash_shoot.flavor": "词条功能",
+  "modifier.tinkers_rainbow.dash_shoot.description": "右键后向右前、左方、右后三段冲刺，对路径上的敌对生物造成5倍伤害。冷却10秒。",
+
+  "modifier.tinkers_rainbow.onsen": "227号温泉乡，开始营业",
+  "modifier.tinkers_rainbow.onsen.flavor": "词条功能",
+  "modifier.tinkers_rainbow.onsen.description": "每8秒对自己触发一次随机温泉料理，恢复不同比例的最大生命值。",
+
+  "modifier.tinkers_rainbow.gene_boost": "基因强化",
+  "modifier.tinkers_rainbow.gene_boost.flavor": "基因飞升！",
+  "modifier.tinkers_rainbow.gene_boost.description": "穿戴此词条的盔甲时提升生命值上限，使用此词条的武器时提升基础攻击力。",
+
+  "effect.tinkers_rainbow.aurora_stun": "极光眩晕",
+  "effect.tinkers_rainbow.crimson_burst_cooldown": "深红爆发冷却",
+
+  "message.tinkers_rainbow.onsen.serve": "给您上菜!",
+  "message.tinkers_rainbow.onsen.food.mantou": "温泉馒头",
+  "message.tinkers_rainbow.onsen.food.rod": "好粗棒",
+  "message.tinkers_rainbow.onsen.food.milk": "牛奶",
+
+  "fluid.tinkers_rainbow.molten_blue_steel": "熔融蓝钢",
+  "fluid.tinkers_rainbow.molten_gene_metal": "熔融基因金属",
+  "fluid.tinkers_rainbow.molten_aurora_crystal": "熔融极光水晶",
+  "fluid.tinkers_rainbow.molten_starcore_ingot": "熔融星夜核心",
+  "fluid.tinkers_rainbow.molten_wakamo": "熔融若藻",
+  "fluid.tinkers_rainbow.molten_sumire": "熔融堇",
+  "fluid.tinkers_rainbow.molten_himari": "熔融日鞠",
+  "fluid.tinkers_rainbow.molten_nodoka": "熔融和香",
+
+  "item.tinkers_rainbow.blue_steel": "蓝钢锭",
+  "item.tinkers_rainbow.blue_steel_nugget": "蓝钢粒",
+  "item.tinkers_rainbow.raw_blue_steel": "粗蓝钢",
+  "item.tinkers_rainbow.blue_steel_heart_fragments": "蓝钢心之碎片",
+  "item.tinkers_rainbow.blue_steel_scrap": "蓝钢碎片",
+  "item.tinkers_rainbow.gene_metal": "基因金属",
+  "item.tinkers_rainbow.gene_metal_nugget": "基因金属粒",
+  "item.tinkers_rainbow.aurora_crystal": "极光水晶",
+  "item.tinkers_rainbow.starcore_ingot": "星夜核心锭",
+  "item.tinkers_rainbow.wakamo_ingot": "若藻锭",
+  "item.tinkers_rainbow.sumire_ingot": "堇锭",
+  "item.tinkers_rainbow.himari_ingot": "日鞠锭",
+  "item.tinkers_rainbow.nodoka_ingot": "和香锭",
+
+  "item.tinkers_rainbow.molten_blue_steel_bucket": "熔融蓝钢桶",
+  "item.tinkers_rainbow.molten_gene_metal_bucket": "熔融基因金属桶",
+  "item.tinkers_rainbow.molten_aurora_crystal_bucket": "熔融极光水晶桶",
+  "item.tinkers_rainbow.molten_starcore_ingot_bucket": "熔融星夜核心桶",
+  "item.tinkers_rainbow.molten_wakamo_bucket": "熔融若藻桶",
+  "item.tinkers_rainbow.molten_sumire_bucket": "熔融堇桶",
+  "item.tinkers_rainbow.molten_himari_bucket": "熔融日鞠桶",
+  "item.tinkers_rainbow.molten_nodoka_bucket": "熔融和香桶",
+
+  "block.tinkers_rainbow.blue_steel_ore": "蓝钢矿石",
+  "block.tinkers_rainbow.blue_steel_deepslate_ore": "深层蓝钢矿石",
+  "block.tinkers_rainbow.blue_steel_block": "蓝钢块",
+  "block.tinkers_rainbow.raw_blue_steel_block": "粗蓝钢块",
+  "block.tinkers_rainbow.blue_steel_debris": "蓝钢残骸",
+  "block.tinkers_rainbow.blue_steel_crate": "蓝钢板条箱"
+}

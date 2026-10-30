@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_wakamo"
+  },
+  "output": "tinkers_rainbow:wakamo_ingot",
+  "temperature": 1600
+}

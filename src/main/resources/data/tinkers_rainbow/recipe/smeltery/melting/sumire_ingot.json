@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:sumire_ingot"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_sumire",
+    "amount": 90
+  },
+  "temperature": 1600,
+  "time": 60
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#tinkers_rainbow:ingots/blue_steel",
+    "#tinkers_rainbow:ingots/aurora_crystal",
+    "#tinkers_rainbow:ingots/gene_metal",
+    "#tinkers_rainbow:ingots/himari_ingot",
+    "#tinkers_rainbow:ingots/nodoka_ingot",
+    "#tinkers_rainbow:ingots/starcore_ingot",
+    "#tinkers_rainbow:ingots/sumire_ingot",
+    "#tinkers_rainbow:ingots/wakamo_ingot"
+  ]
+}

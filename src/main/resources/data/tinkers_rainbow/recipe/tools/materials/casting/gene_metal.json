@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_gene_metal"
+  },
+  "output": "tinkers_rainbow:gene_metal",
+  "temperature": 900
+}

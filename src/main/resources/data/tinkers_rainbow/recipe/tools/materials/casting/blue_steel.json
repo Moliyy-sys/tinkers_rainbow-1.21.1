@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_blue_steel"
+  },
+  "output": "tinkers_rainbow:blue_steel",
+  "temperature": 800
+}

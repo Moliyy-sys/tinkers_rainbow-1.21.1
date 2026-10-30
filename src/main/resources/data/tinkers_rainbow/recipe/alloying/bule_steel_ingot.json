@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "amount": 90, "fluid": "tconstruct:molten_steel" },
+    { "amount": 270, "fluid": "tconstruct:molten_bronze" },
+    { "amount": 270, "fluid": "tconstruct:molten_iron" }
+  ],
+  "result": { "amount": 270, "fluid": "tinkers_rainbow:molten_bule_steel" },
+  "temperature": 800
+}

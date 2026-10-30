@@ -1,0 +1,7 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": { "item": "tinkers_rainbow:gene_metal_nugget" },
+  "value": 1,
+  "needed": 9,
+  "material": "tinkers_rainbow:gene_metal"
+}

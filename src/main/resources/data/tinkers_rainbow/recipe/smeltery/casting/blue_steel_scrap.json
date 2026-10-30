@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "item": "minecraft:netherite_scrap"
+  },
+  "cast_consumed": true,
+  "cooling_time": 120,
+  "fluid": {
+    "amount": 270,
+    "fluid": "tinkers_rainbow:molten_blue_steel"
+  },
+  "result": "tinkers_rainbow:blue_steel_scrap"
+}

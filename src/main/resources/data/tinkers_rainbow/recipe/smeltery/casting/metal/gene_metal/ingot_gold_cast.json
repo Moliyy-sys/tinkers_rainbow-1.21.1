@@ -1,0 +1,14 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "tconstruct:ingot_cast"
+  },
+  "cooling_time": 60,
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_gene_metal"
+  },
+  "result": {
+    "item": "tinkers_rainbow:gene_metal"
+  }
+}
