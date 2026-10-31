@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class OnsenModifier extends Modifier implements InventoryTickModifierHook {
 
-    private static final int INTERVAL_TICKS = 160; // 8 秒
+    private static final int INTERVAL_TICKS = 40;
     private static final Random RANDOM = new Random();
 
     private static final String KEY_SERVE = "message.tinkers_rainbow.onsen.serve";
@@ -61,11 +61,11 @@ public class OnsenModifier extends Modifier implements InventoryTickModifierHook
 
         int roll = RANDOM.nextInt(100);
         if (roll < 60) {
-            heal(player, 0.1F, KEY_MANTOU);
+            heal(player, 0.2F, KEY_MANTOU);
         } else if (roll < 90) {
-            heal(player, 0.3F, KEY_ROD);
+            heal(player, 0.5F, KEY_ROD);
         } else {
-            heal(player, 0.5F, KEY_MILK);
+            heal(player, 0.8F, KEY_MILK);
         }
 
     }

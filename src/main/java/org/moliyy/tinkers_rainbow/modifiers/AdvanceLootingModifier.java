@@ -51,7 +51,7 @@ public class AdvanceLootingModifier extends Modifier
         hookBuilder.addHook(this, ModifierHooks.ENCHANTMENTS);
     }
 
-    // ========== 抢夺等级 ==========
+
 
     @Override
     public int updateLooting(IToolStackView tool, ModifierEntry modifier,
@@ -59,7 +59,7 @@ public class AdvanceLootingModifier extends Modifier
         return looting + modifier.getLevel();
     }
 
-    // ========== 抢夺附魔：逐等级叠加（参数已提供 Holder） ==========
+
 
     @Override
     public int updateEnchantmentLevel(IToolStackView tool, ModifierEntry modifier,
@@ -70,7 +70,7 @@ public class AdvanceLootingModifier extends Modifier
         return level;
     }
 
-    // ========== 抢夺附魔：批量注入（参数已提供 RegistryLookup） ==========
+
 
     @Override
     public void updateEnchantments(IToolStackView tool, ModifierEntry modifier,
@@ -80,7 +80,7 @@ public class AdvanceLootingModifier extends Modifier
         map.merge(looting, modifier.getLevel() + 1, Integer::sum);
     }
 
-    // ========== 额外掉落 ==========
+
 
     @Override
     public void processLoot(IToolStackView tool, ModifierEntry modifier,

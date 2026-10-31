@@ -25,16 +25,34 @@ public class RainbowFluids {
             register("molten_blue_steel", 800, 10, 8000);
 
     public static final FlowingFluidObject<BaseFlowingFluid> molten_wakamo =
-            register("molten_wakamo", 1600, 10, 10000);
+            register("molten_wakamo", 1500, 10, 10000);
 
     public static final FlowingFluidObject<BaseFlowingFluid> molten_himari =
-            register("molten_himari", 1600, 10, 10000);
+            register("molten_himari", 1500, 10, 10000);
 
     public static final FlowingFluidObject<BaseFlowingFluid> molten_nodoka =
-            register("molten_nodoka", 1600, 10, 10000);
+            register("molten_nodoka", 1500, 10, 10000);
 
     public static final FlowingFluidObject<BaseFlowingFluid> molten_sumire =
-            register("molten_sumire", 1600, 10, 10000);
+            register("molten_sumire", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_airi =
+            register("molten_airi", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_aobo =
+            register("molten_aoba", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_izumi =
+            register("molten_izumi", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_kisaki =
+            register("molten_kisaki", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_mine =
+            register("molten_mine", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_hiyori =
+            register("molten_hiyori", 1500, 10, 10000);
 
     public static final FlowingFluidObject<BaseFlowingFluid> molten_gene_metal =
             register("molten_gene_metal", 900, 10, 6000);

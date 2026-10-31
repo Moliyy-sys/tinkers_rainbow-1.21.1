@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:mine_ingot"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_mine",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 60
+}

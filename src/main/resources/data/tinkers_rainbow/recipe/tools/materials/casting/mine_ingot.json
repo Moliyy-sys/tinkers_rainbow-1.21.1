@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_mine"
+  },
+  "output": "tinkers_rainbow:mine_ingot",
+  "temperature": 1500
+}

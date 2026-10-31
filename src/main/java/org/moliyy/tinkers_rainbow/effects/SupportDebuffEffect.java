@@ -11,9 +11,9 @@ public class SupportDebuffEffect extends MobEffect {
         super(MobEffectCategory.HARMFUL, 0x99CCFF);
         this.addAttributeModifier(Attributes.ATTACK_DAMAGE,
                 ResourceLocation.fromNamespaceAndPath("tinkers_rainbow", "sound_wave_atk_down"),
-                -0.3D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+                -0.3D, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL); // 修复这里
         this.addAttributeModifier(Attributes.ARMOR,
                 ResourceLocation.fromNamespaceAndPath("tinkers_rainbow", "sound_wave_armor_down"),
-                -0.3D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+                -0.3D, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL); // 修复这里
     }
 }

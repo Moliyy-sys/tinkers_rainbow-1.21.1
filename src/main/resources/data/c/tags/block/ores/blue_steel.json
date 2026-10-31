@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tinkers_rainbow:blue_steel_ore"
+    "tinkers_rainbow:blue_steel_ore",
+    "tinkers_rainbow:blue_steel_deepslate_ore"
   ]
 }

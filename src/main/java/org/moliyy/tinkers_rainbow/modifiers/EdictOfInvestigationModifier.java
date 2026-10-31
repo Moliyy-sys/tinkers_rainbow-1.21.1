@@ -28,9 +28,11 @@ public class EdictOfInvestigationModifier extends Modifier implements ModifierTr
         if (!firstEncounter) return;
 
         int boost = modifier.getLevel() + 1;
+
         for (ModifierEntry entry : context.getModifierList()) {
-            if (entry.getModifier() == this) continue; // 跳过自己
-            int newLevel = entry.getLevel() + boost;
+            if (entry.getModifier() == this) continue;
+
+            builder.add(new ModifierEntry(entry.getModifier(), boost));
         }
     }
 

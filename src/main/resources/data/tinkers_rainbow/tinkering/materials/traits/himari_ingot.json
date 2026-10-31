@@ -1,6 +1,5 @@
 {
   "default": [
-    { "name": "tinkers_rainbow:show_strength", "level": 1 },
-    { "name": "tinkers_rainbow:gene_boost", "level": 1 }
+    { "name": "tinkers_rainbow:show_strength", "level": 1 }
   ]
 }

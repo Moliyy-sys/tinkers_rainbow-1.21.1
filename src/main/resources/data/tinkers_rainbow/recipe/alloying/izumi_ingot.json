@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "amount": 250, "fluid": "tconstruct:mushroom_stew" },
+    { "amount": 250, "fluid": "tconstruct:meat_soup" },
+    { "amount": 270, "fluid": "tinkers_rainbow:molten_gene_metal" }
+  ],
+  "result": { "amount": 270, "fluid": "tinkers_rainbow:molten_izumi" },
+  "temperature": 1500
+}

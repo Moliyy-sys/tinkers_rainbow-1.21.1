@@ -1,6 +1,7 @@
 {
   "pack": {
     "description": "Tinkers' Rainbow Resources",
-    "pack_format": 34
+    "pack_format": 48,
+    "supported_formats": [34, 48]
   }
 }

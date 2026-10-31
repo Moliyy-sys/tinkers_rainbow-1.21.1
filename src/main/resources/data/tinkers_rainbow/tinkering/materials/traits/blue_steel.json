@@ -1,6 +1,8 @@
 {
   "default": [
-    { "name": "tinkers_rainbow:advance_looting", "level": 1 },
-    { "name": "tinkers_rainbow:advance_fortune", "level": 1 }
+
+    { "name": "tinkers_rainbow:advance_fortune", "level": 1 },
+    { "name": "tinkers_rainbow:advance_looting", "level": 1 }
+
   ]
 }

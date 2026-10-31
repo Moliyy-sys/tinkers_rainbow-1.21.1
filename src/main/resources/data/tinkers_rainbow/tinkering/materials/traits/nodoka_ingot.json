@@ -1,6 +1,5 @@
 {
   "default": [
-    { "name": "tinkers_rainbow:onsen", "level": 1 },
-    { "name": "tinkers_rainbow:gene_boost", "level": 1 }
+    { "name": "tinkers_rainbow:onsen", "level": 1 }
   ]
 }

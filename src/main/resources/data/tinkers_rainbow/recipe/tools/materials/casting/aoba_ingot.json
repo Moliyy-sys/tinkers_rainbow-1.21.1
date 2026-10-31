@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_aoba"
+  },
+  "output": "tinkers_rainbow:aoba_ingot",
+  "temperature": 1500
+}

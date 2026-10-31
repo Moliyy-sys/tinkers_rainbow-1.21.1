@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_airi"
+  },
+  "output": "tinkers_rainbow:airi_ingot",
+  "temperature": 1500
+}

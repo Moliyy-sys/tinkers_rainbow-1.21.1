@@ -1,10 +1,12 @@
 package org.moliyy.tinkers_rainbow;
 
 import net.minecraft.world.item.Items;
+import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import org.moliyy.tinkers_rainbow.blocks.RainbowBlocks;
 import org.moliyy.tinkers_rainbow.effects.RainbowEffects;
 import org.moliyy.tinkers_rainbow.fluids.RainbowFluids;
 import org.moliyy.tinkers_rainbow.items.RainbowItems;
+import org.moliyy.tinkers_rainbow.modifiers.HonorAndFaithModifier;
 import org.moliyy.tinkers_rainbow.modifiers.RainbowModifiers;
 import org.slf4j.Logger;
 
@@ -103,6 +105,11 @@ public class TinkersRainbow {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(RainbowItems.BLUE_STEEL_INGOT.get());
         }
+    }
+
+    @SubscribeEvent
+    public void onLivingFall(LivingFallEvent event) {
+        HonorAndFaithModifier.onPlayerFall(event);
     }
 
     @SubscribeEvent

@@ -27,14 +27,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(RainbowBlocks.BLUE_STEEL_ORE.get())
                 .add(RainbowBlocks.BLUE_STEEL_DEEPSLATE_ORE.get())
                 .add(RainbowBlocks.BLUE_STEEL_BLOCK.get())
-                .add(RainbowBlocks.RAW_BLUE_STEEL_BLOCK.get())
                 .add(RainbowBlocks.BLUE_STEEL_DEBRIS.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(RainbowBlocks.BLUE_STEEL_ORE.get())
                 .add(RainbowBlocks.BLUE_STEEL_DEEPSLATE_ORE.get())
-                .add(RainbowBlocks.BLUE_STEEL_BLOCK.get())
-                .add(RainbowBlocks.RAW_BLUE_STEEL_BLOCK.get());
+                .add(RainbowBlocks.BLUE_STEEL_BLOCK.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(RainbowBlocks.BLUE_STEEL_DEBRIS.get());
@@ -44,7 +42,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(RainbowBlocks.BLUE_STEEL_DEEPSLATE_ORE.get());
 
         tag(Tags.Blocks.STORAGE_BLOCKS)
-                .add(RainbowBlocks.BLUE_STEEL_BLOCK.get())
-                .add(RainbowBlocks.RAW_BLUE_STEEL_BLOCK.get());
+                .add(RainbowBlocks.BLUE_STEEL_BLOCK.get());
     }
 }

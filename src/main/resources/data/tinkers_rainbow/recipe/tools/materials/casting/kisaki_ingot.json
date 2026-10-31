@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_kisaki"
+  },
+  "output": "tinkers_rainbow:kisaki_ingot",
+  "temperature": 1500
+}

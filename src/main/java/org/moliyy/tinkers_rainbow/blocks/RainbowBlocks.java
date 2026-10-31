@@ -30,13 +30,6 @@ public class RainbowBlocks {
                     .mapColor(MapColor.METAL).strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL));
 
-
-    public static final DeferredBlock<Block> RAW_BLUE_STEEL_BLOCK = BLOCKS.registerSimpleBlock(
-            "raw_blue_steel_block", BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE).strength(5.0F, 6.0F)
-                    .requiresCorrectToolForDrops().sound(SoundType.STONE));
-
-
     public static final DeferredBlock<Block> BLUE_STEEL_DEBRIS =
             BLOCKS.register("blue_steel_debris",
                     () -> new Block(BlockBehaviour.Properties.of()

@@ -50,6 +50,23 @@ public class RainbowItems {
     public static final DeferredItem<Item> SUMIRE_INGOT =
             ITEMS.registerSimpleItem("sumire_ingot");
 
+    public static final DeferredItem<Item> AOBA_INGOT =
+            ITEMS.registerSimpleItem("aoba_ingot");
+
+    public static final DeferredItem<Item> HIYORI_INGOT =
+            ITEMS.registerSimpleItem("hiyori_ingot");
+
+    public static final DeferredItem<Item> IZUMI_INGOT =
+            ITEMS.registerSimpleItem("izumi_ingot");
+
+    public static final DeferredItem<Item> KISAKI_INGOT =
+            ITEMS.registerSimpleItem("kisaki_ingot");
+
+    public static final DeferredItem<Item> MINE_INGOT =
+            ITEMS.registerSimpleItem("mine_ingot");
+
+    public static final DeferredItem<Item> AIRI_INGOT =
+            ITEMS.registerSimpleItem("airi_ingot");
 
     public static final DeferredItem<BlockItem> BLUE_STEEL_ORE_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_ore", RainbowBlocks.BLUE_STEEL_ORE);

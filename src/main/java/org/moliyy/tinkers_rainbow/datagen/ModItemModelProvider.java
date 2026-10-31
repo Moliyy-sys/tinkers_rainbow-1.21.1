@@ -40,6 +40,18 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         basicItem(RainbowItems.SUMIRE_INGOT.get());
 
+        basicItem(RainbowItems.AIRI_INGOT.get());
+
+        basicItem(RainbowItems.HIYORI_INGOT.get());
+
+        basicItem(RainbowItems.KISAKI_INGOT.get());
+
+        basicItem(RainbowItems.MINE_INGOT.get());
+
+        basicItem(RainbowItems.IZUMI_INGOT.get());
+
+        basicItem(RainbowItems.AOBA_INGOT.get());
+
         withExistingParent("blue_steel_ore", modLoc("block/blue_steel_ore"));
 
         withExistingParent("blue_steel_deepslate_ore", modLoc("block/blue_steel_deepslate_ore"));

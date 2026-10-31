@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_izumi"
+  },
+  "output": "tinkers_rainbow:izumi_ingot",
+  "temperature": 1500
+}

@@ -2,7 +2,6 @@
   "values": [
     "tinkers_rainbow:blue_steel_ore",
     "tinkers_rainbow:blue_steel_deepslate_ore",
-    "tinkers_rainbow:blue_steel_block",
-    "tinkers_rainbow:raw_blue_steel_block"
+    "tinkers_rainbow:blue_steel_block"
   ]
 }
