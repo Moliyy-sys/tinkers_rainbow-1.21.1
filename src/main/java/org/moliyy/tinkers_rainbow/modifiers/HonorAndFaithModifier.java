@@ -4,11 +4,9 @@ import net.minecraft.nbt.LongTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -24,7 +22,6 @@ import slimeknights.tconstruct.library.modifiers.hook.interaction.GeneralInterac
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InteractionSource;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -97,8 +94,7 @@ public class HonorAndFaithModifier extends Modifier implements GeneralInteractio
 
         JumpData data = JUMPING_PLAYERS.get(player.getUUID());
         if (data != null) {
-
-            if (player.onGround() || player.level().getGameTime() > data.expireTime()) {
+            if (player.level().getGameTime() > data.expireTime()) {
                 JUMPING_PLAYERS.remove(player.getUUID());
             }
         }

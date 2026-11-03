@@ -17,6 +17,7 @@ public class CooldownHudRenderer {
     public static final int RENDER_HEIGHT = 13;
 
     public static void render(GuiGraphics guiGraphics, Font font, int x, int y, float progress, int remainingSeconds, boolean isReady) {
+
         float scale = 0.25f;
 
         guiGraphics.pose().pushPose();
