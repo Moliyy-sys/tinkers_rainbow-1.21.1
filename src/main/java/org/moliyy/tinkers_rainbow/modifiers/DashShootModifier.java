@@ -12,7 +12,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import org.moliyy.tinkers_rainbow.Config;
 import org.moliyy.tinkers_rainbow.TinkersRainbow;
+import org.moliyy.tinkers_rainbow.utils.ICooldownModifier;
+import org.moliyy.tinkers_rainbow.utils.ModifierInteractionHelper;
+import org.moliyy.tinkers_rainbow.utils.SyncUtils;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -25,27 +29,24 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.List;
 
-public class DashShootModifier extends Modifier implements GeneralInteractionModifierHook, InventoryTickModifierHook {
+public class DashShootModifier extends Modifier implements
+        GeneralInteractionModifierHook, InventoryTickModifierHook, ICooldownModifier {
 
     private static final ResourceLocation KEY_DASH_TICK =
             ResourceLocation.fromNamespaceAndPath(TinkersRainbow.MODID, "dash_tick");
-    private static final ResourceLocation KEY_DASH_UNTIL =
-            ResourceLocation.fromNamespaceAndPath(TinkersRainbow.MODID, "dash_cooldown_until");
+    private static final ResourceLocation KEY_DASH_COOLDOWN =
+            ResourceLocation.fromNamespaceAndPath(TinkersRainbow.MODID, "dash_shoot_cooldown");
     private static final ResourceLocation KEY_DASH_STAGE =
             ResourceLocation.fromNamespaceAndPath(TinkersRainbow.MODID, "dash_stage");
 
-    private static final int COOLDOWN_TICKS = 200;
     private static final int TICKS_PER_STAGE = 4;
     private static final int TOTAL_STAGES = 3;
     private static final double DASH_DISTANCE_MULTIPLIER = 3.0;
-
     private static final double WALL_CHECK_OFFSET = 0.1;
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        // 分两次注册，避免可变参数签名歧义
-        hookBuilder.addHook(this, ModifierHooks.GENERAL_INTERACT);
-        hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK);
+        hookBuilder.addHook(this, ModifierHooks.GENERAL_INTERACT, ModifierHooks.INVENTORY_TICK);
     }
 
     @Override
@@ -55,15 +56,25 @@ public class DashShootModifier extends Modifier implements GeneralInteractionMod
             return InteractionResult.PASS;
         }
 
+        if (!ModifierInteractionHelper.isSelected(tool, modifier, player)) {
+            return InteractionResult.PASS;
+        }
+
         var data = tool.getPersistentData();
+
         long now = player.level().getGameTime();
-        Long untilBoxed = data.get(KEY_DASH_UNTIL, (tag, key) -> tag.getLong(key));
-        long until = untilBoxed == null ? 0L : untilBoxed;
-        if (now < until) {
+
+        long lastUse = data.get(KEY_DASH_COOLDOWN, (tag, key) -> tag.getLong(key));
+        int cooldownTicks = Config.COMMON.dashShootCooldown.get();
+
+        if (lastUse > 0 && now - lastUse < cooldownTicks) {
             return InteractionResult.FAIL;
         }
 
-        data.put(KEY_DASH_UNTIL, LongTag.valueOf(now + COOLDOWN_TICKS));
+        data.put(KEY_DASH_COOLDOWN, LongTag.valueOf(now));
+
+        SyncUtils.syncHand(player, hand);
+
         data.putInt(KEY_DASH_STAGE, 0);
         data.putInt(KEY_DASH_TICK, 0);
 
@@ -87,29 +98,21 @@ public class DashShootModifier extends Modifier implements GeneralInteractionMod
     public static void tickDash(Player player, IToolStackView tool, int level) {
         var data = tool.getPersistentData();
 
-        Long cooldownBoxed = data.get(KEY_DASH_UNTIL, (tag, key) -> tag.getLong(key));
-        long cooldownUntil = cooldownBoxed == null ? 0L : cooldownBoxed;
-        if (cooldownUntil == 0L) return;
-
-        long now = player.level().getGameTime();
         int stage = data.getInt(KEY_DASH_STAGE);
         int tick = data.getInt(KEY_DASH_TICK);
 
         if (stage >= TOTAL_STAGES) {
-            if (now >= cooldownUntil) {
-                data.put(KEY_DASH_UNTIL, LongTag.valueOf(0L));
-            }
             return;
         }
 
         if (!player.isAlive() || player.isSpectator()) {
-            stopDash(tool, player, now, cooldownUntil);
+            stopDash(tool, player);
             return;
         }
 
-        // ---- 强制水平方向 ----
         Vec3 look = player.getLookAngle();
         Vec3 dir = new Vec3(look.x, 0, look.z);
+
         if (dir.lengthSqr() > 1.0E-6) {
             dir = dir.normalize();
         } else {
@@ -126,49 +129,43 @@ public class DashShootModifier extends Modifier implements GeneralInteractionMod
         };
         Vec3 step = stageMotion.scale(DASH_DISTANCE_MULTIPLIER / TICKS_PER_STAGE);
 
-        // ---- 撞墙保护：只检测水平方向 0.1 格偏移 ----
         Vec3 flatStep = new Vec3(step.x, 0, step.z);
         if (flatStep.lengthSqr() > 1.0E-6) {
             Vec3 offset = flatStep.normalize().scale(WALL_CHECK_OFFSET);
             AABB checkBox = player.getBoundingBox().move(offset);
             if (!player.level().noCollision(player, checkBox)) {
-                stopDash(tool, player, now, cooldownUntil);
+                stopDash(tool, player);
                 return;
             }
         }
 
-        // ---- 关键修复 1：用"扫掠 AABB"覆盖整个 tick 位移 ----
-        // 记录本 tick 位移前的碰撞箱，与位移后的碰撞箱合并，再膨胀 1.5 格
         AABB sweptBox = player.getBoundingBox()
                 .minmax(player.getBoundingBox().move(step))
                 .inflate(1.5);
 
-        // ---- 关键修复 2：移除 Enemy 过滤，攻击所有非玩家、非友方、非创造模式实体 ----
+
         List<LivingEntity> targets = player.level().getEntitiesOfClass(
                 LivingEntity.class, sweptBox,
                 e -> e != player
                         && e.isAlive()
-                        && !(e instanceof Player)                       // 不打其他玩家
-                        && !(e instanceof net.minecraft.world.entity.TamableAnimal tame && tame.isTame() && tame.getOwner() == player) // 不打自己的宠物
-                        && !e.isInvulnerable()                          // 不打无敌实体
+                        && !(e instanceof Player)
+                        && !(e instanceof net.minecraft.world.entity.TamableAnimal tame && tame.isTame() && tame.getOwner() == player)
+                        && !e.isInvulnerable()
         );
 
-        // 每 tick 施加速度
         player.setDeltaMovement(step);
         player.hurtMarked = true;
         player.fallDistance = 0;
 
-        // ---- 伤害判定（仅服务端） ----
         if (!targets.isEmpty()) {
             DamageSource source = player.damageSources().playerAttack(player);
 
-            // ---- 关键修复 3：攻击力保底 1.0，避免空手/副手时伤害为 0 ----
             float base = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
             if (base <= 0.0F) base = 1.0F;
-            float damage = base * 3.0F;
+            float damage = base * Config.COMMON.dashShootDamageMultiplier.get().floatValue();;
 
             for (LivingEntity target : targets) {
-                // hurt 返回 false 表示被无敌帧/免疫拦截，无需处理，继续尝试下一个
+
                 target.hurt(source, damage);
             }
         }
@@ -180,7 +177,7 @@ public class DashShootModifier extends Modifier implements GeneralInteractionMod
         }
 
         if (stage >= TOTAL_STAGES) {
-            stopDash(tool, player, now, cooldownUntil);
+            stopDash(tool, player);
             return;
         }
 
@@ -188,15 +185,21 @@ public class DashShootModifier extends Modifier implements GeneralInteractionMod
         data.putInt(KEY_DASH_TICK, tick);
     }
 
-    private static void stopDash(IToolStackView tool, Player player, long now, long cooldownUntil) {
+    private static void stopDash(IToolStackView tool, Player player) {
         var data = tool.getPersistentData();
         data.putInt(KEY_DASH_STAGE, TOTAL_STAGES);
         data.putInt(KEY_DASH_TICK, 0);
         player.setDeltaMovement(Vec3.ZERO);
         player.hurtMarked = true;
+    }
 
-        if (now >= cooldownUntil) {
-            data.put(KEY_DASH_UNTIL, LongTag.valueOf(0L));
-        }
+    @Override
+    public ResourceLocation getCooldownKey() {
+        return KEY_DASH_COOLDOWN;
+    }
+
+    @Override
+    public int getCooldownTicks(IToolStackView tool, ModifierEntry modifier) {
+        return Config.COMMON.dashShootCooldown.get();
     }
 }

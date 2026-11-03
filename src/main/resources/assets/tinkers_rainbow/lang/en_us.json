@@ -154,5 +154,29 @@
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "Deepslate Blue Steel Ore",
   "block.tinkers_rainbow.blue_steel_block": "Block of Blue Steel",
   "block.tinkers_rainbow.raw_blue_steel_block": "Block of Raw Blue Steel",
-  "block.tinkers_rainbow.blue_steel_debris": "Blue Steel Debris"
+  "block.tinkers_rainbow.blue_steel_debris": "Blue Steel Debris",
+
+  "tinkers_rainbow.configuration.section.client.toml.title": "Client Settings",
+  "tinkers_rainbow.configuration.modifiers": "Modifiers Settings",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger": "Cheesy Chocolate Burger~",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger.gen_cooldown": "Generation Cooldown (ticks)",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger.eat_cooldown": "Auto-Eat Cooldown (ticks)",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger.heal_percentage": "Heal Percentage (%)",
+  "tinkers_rainbow.configuration.modifiers.repair_cart": "N-need to repair...!",
+  "tinkers_rainbow.configuration.modifiers.repair_cart.cooldown": "Cooldown (ticks)",
+  "tinkers_rainbow.configuration.modifiers.repair_cart.damage_multiplier": "Damage Multiplier",
+  "tinkers_rainbow.configuration.modifiers.honor_and_faith": "Honor and Faith",
+  "tinkers_rainbow.configuration.modifiers.honor_and_faith.cooldown": "Cooldown (ticks)",
+  "tinkers_rainbow.configuration.modifiers.honor_and_faith.damage_multiplier": "Damage Multiplier",
+  "tinkers_rainbow.configuration.modifiers.support_sound_wave": "S-supporting right now!",
+  "tinkers_rainbow.configuration.modifiers.support_sound_wave.cooldown": "Cooldown (ticks)",
+  "tinkers_rainbow.configuration.modifiers.support_sound_wave.damage_multiplier": "Damage Multiplier",
+  "tinkers_rainbow.configuration.modifiers.edict_of_investigation": "Edict: Investigation of Things",
+  "tinkers_rainbow.configuration.modifiers.edict_of_investigation.attack_multiplier": "Attack Damage Multiplier",
+
+  "gui.tinkers_rainbow.hud_editor.title": "Edit Cooldown Bar HUD",
+  "gui.tinkers_rainbow.hud_editor.instructions": "Drag the cooldown bar to adjust its position, press ESC to save and exit",
+
+  "key.categories.tinkers_rainbow": "Tinkers' Rainbow",
+  "key.tinkers_rainbow.edit_hud": "Edit Cooldown Bar HUD"
 }

@@ -1,10 +1,16 @@
 package org.moliyy.tinkers_rainbow.modifiers;
 
+import net.minecraft.nbt.LongTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
-import org.moliyy.tinkers_rainbow.effects.RepairMinecart;
+import org.moliyy.tinkers_rainbow.Config;
+import org.moliyy.tinkers_rainbow.utils.ICooldownModifier;
+import org.moliyy.tinkers_rainbow.utils.ModifierInteractionHelper;
+import org.moliyy.tinkers_rainbow.utils.RepairMinecart;
+import org.moliyy.tinkers_rainbow.utils.SyncUtils;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -17,8 +23,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class RepairCartModifier extends Modifier implements GeneralInteractionModifierHook {
+public class RepairCartModifier extends Modifier implements
+        GeneralInteractionModifierHook, ICooldownModifier {
     private static final Map<UUID, RepairMinecart> LAST_CART = new HashMap<>();
+
+    private static final ResourceLocation COOLDOWN_KEY  =
+            ResourceLocation.fromNamespaceAndPath("tinkers_rainbow", "repair_cart_cooldown");
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
@@ -30,13 +40,23 @@ public class RepairCartModifier extends Modifier implements GeneralInteractionMo
                                        InteractionHand hand, InteractionSource source) {
         if (player.level().isClientSide || tool.isBroken()) return InteractionResult.PASS;
 
-        // 清除上一次召唤的矿车
+        if (!ModifierInteractionHelper.isSelected(tool, modifier, player)) {
+            return InteractionResult.PASS;
+        }
+
+        long currentTime = player.level().getGameTime();
+        long lastUse = tool.getPersistentData().get(COOLDOWN_KEY, (tag, key) -> tag.getLong(key));
+
+        if (lastUse > 0 && currentTime - lastUse < Config.COMMON.repairCartCooldown.get()) {
+            return InteractionResult.FAIL;
+        }
+
         RepairMinecart old = LAST_CART.remove(player.getUUID());
+
         if (old != null && old.isAlive()) {
             old.discard();
         }
 
-        // 获取水平冲刺方向
         Vec3 look = player.getLookAngle();
         Vec3 horizontalLook = new Vec3(look.x, 0, look.z);
         if (horizontalLook.lengthSqr() < 1.0E-4) {
@@ -44,19 +64,31 @@ public class RepairCartModifier extends Modifier implements GeneralInteractionMo
         }
         horizontalLook = horizontalLook.normalize();
 
-        // 直接生成在玩家当前位置
         RepairMinecart minecart = new RepairMinecart(player.level(), player.getX(), player.getY(), player.getZ());
         player.level().addFreshEntity(minecart);
 
-        // 玩家乘坐
         player.startRiding(minecart, true);
-        player.hurtMarked = true; // 强制同步玩家位置到客户端
+        player.hurtMarked = true;
 
-        // 传入速度，原速度 1.5 提高 4 倍即为 6.0
         minecart.setChargeVector(horizontalLook.scale(6.0), player);
         minecart.hurtMarked = true;
 
         LAST_CART.put(player.getUUID(), minecart);
+
+        tool.getPersistentData().put(COOLDOWN_KEY, LongTag.valueOf(currentTime));
+
+        SyncUtils.syncHand(player, hand);
+
         return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    public ResourceLocation getCooldownKey() {
+        return COOLDOWN_KEY;
+    }
+
+    @Override
+    public int getCooldownTicks(IToolStackView tool, ModifierEntry modifier) {
+        return Config.COMMON.repairCartCooldown.get();
     }
 }

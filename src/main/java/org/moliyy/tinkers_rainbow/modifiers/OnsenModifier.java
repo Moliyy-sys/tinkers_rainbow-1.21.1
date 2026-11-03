@@ -1,24 +1,29 @@
 package org.moliyy.tinkers_rainbow.modifiers;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.moliyy.tinkers_rainbow.Config;
+import org.moliyy.tinkers_rainbow.utils.ICooldownModifier;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InventoryTickModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.interaction.UsingToolModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class OnsenModifier extends Modifier implements InventoryTickModifierHook {
+public class OnsenModifier extends Modifier implements
+        InventoryTickModifierHook, ICooldownModifier {
 
-    private static final int INTERVAL_TICKS = 40;
+    private static final ResourceLocation INTERVAL_TICKS  =
+            ResourceLocation.fromNamespaceAndPath("tinkers_rainbow", "onsen_cooldown");
+
     private static final Random RANDOM = new Random();
 
     private static final String KEY_SERVE = "message.tinkers_rainbow.onsen.serve";
@@ -50,7 +55,7 @@ public class OnsenModifier extends Modifier implements InventoryTickModifierHook
             return;
         }
 
-        if (player.tickCount % INTERVAL_TICKS != 0) {
+        if (player.tickCount % Config.COMMON.onsenCooldown.get() != 0) {
             return;
         }
         if (player.getHealth() >= player.getMaxHealth()) {
@@ -68,5 +73,15 @@ public class OnsenModifier extends Modifier implements InventoryTickModifierHook
             heal(player, 0.8F, KEY_MILK);
         }
 
+    }
+
+    @Override
+    public ResourceLocation getCooldownKey() {
+        return INTERVAL_TICKS;
+    }
+
+    @Override
+    public int getCooldownTicks(IToolStackView tool, ModifierEntry modifier) {
+        return Config.COMMON.onsenCooldown.get();
     }
 }

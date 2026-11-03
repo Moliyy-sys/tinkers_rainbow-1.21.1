@@ -27,7 +27,7 @@ public class ShowStrengthModifier extends Modifier implements MeleeDamageModifie
 
         // 额外加成 = baseDamage × (倍率 - 1.0)
         // 默认 1.05 → 额外 5% 基础伤害，最终 X + 1.05X = 2.05X
-        float multiplier = Config.SHOW_STRENGTH_BONUS.get().floatValue();
+        float multiplier = Config.COMMON.showStrengthBonus.get().floatValue();
         return damage + baseDamage * multiplier;
     }
 

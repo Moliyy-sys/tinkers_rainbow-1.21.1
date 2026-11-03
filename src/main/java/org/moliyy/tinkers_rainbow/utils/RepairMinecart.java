@@ -1,4 +1,4 @@
-package org.moliyy.tinkers_rainbow.effects;
+package org.moliyy.tinkers_rainbow.utils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -37,17 +37,17 @@ public class RepairMinecart extends Minecart {
     public void setChargeVector(Vec3 vector, Player attacker) {
         this.chargeVector = vector;
         this.attacker = attacker;
-        this.chargeTicks = 40; // 冲刺持续 2 秒
+        this.chargeTicks = 40;
     }
 
     @Override
     public boolean hurt(DamageSource source, float amount) {
-        return false; // 免疫物理攻击
+        return false;
     }
 
     @Override
     public void destroy(DamageSource source) {
-        this.discard(); // 拦截原版掉落物
+        this.discard();
     }
 
     @Override
@@ -57,13 +57,11 @@ public class RepairMinecart extends Minecart {
             return;
         }
 
-        // 如果玩家中途下车了，直接爆炸
         if (this.getFirstPassenger() == null && this.tickCount > 5) {
             this.explodeAndSelfDestruct();
             return;
         }
 
-        // 墙体碰撞预判
         if (this.chargeVector != null && this.chargeTicks > 0) {
             AABB nextBox = this.getBoundingBox().move(this.getDeltaMovement());
             boolean hitWall = false;
@@ -91,11 +89,9 @@ public class RepairMinecart extends Minecart {
             }
         }
 
-        // 强制锁定速度
         if (this.chargeVector != null && this.chargeTicks > 0) {
             this.setDeltaMovement(this.chargeVector);
 
-            // 同步乘客速度，防止客户端卡顿回弹
             if (this.getFirstPassenger() != null) {
                 this.getFirstPassenger().hurtMarked = true;
             }
@@ -108,14 +104,12 @@ public class RepairMinecart extends Minecart {
             this.setDeltaMovement(this.chargeVector);
             this.chargeTicks--;
 
-            // 时间结束，正常到达终点，触发爆炸！
             if (this.chargeTicks <= 0) {
                 this.explodeAndSelfDestruct();
                 return;
             }
         }
 
-        // 路径伤害判定
         if (this.tickCount > 5 && this.chargeTicks > 0) {
             if (this.attacker != null && this.attacker.isAlive()) {
                 float damage = (float) this.attacker.getAttributeValue(Attributes.ATTACK_DAMAGE) * 3.0F;
@@ -137,21 +131,16 @@ public class RepairMinecart extends Minecart {
         }
     }
 
-    /**
-     * 终点/异常爆炸逻辑
-     */
     private void explodeAndSelfDestruct() {
         if (this.hasExploded) return;
         this.hasExploded = true;
 
-        // 1. 将玩家安全弹出
         if (this.getFirstPassenger() instanceof LivingEntity passenger) {
             passenger.stopRiding();
-            passenger.setDeltaMovement(Vec3.ZERO); // 清除冲刺惯性，安全落地
+            passenger.setDeltaMovement(Vec3.ZERO);
             passenger.hurtMarked = true;
         }
 
-        // 2. 播放爆炸音效与粒子
         this.level().playSound(null, this.getX(), this.getY(), this.getZ(),
                 SoundEvents.GENERIC_EXPLODE.value(), SoundSource.BLOCKS, 1.0F, 1.0F);
 
@@ -159,7 +148,6 @@ public class RepairMinecart extends Minecart {
             serverLevel.sendParticles(ParticleTypes.EXPLOSION_EMITTER, this.getX(), this.getY(), this.getZ(), 1, 0, 0, 0, 0);
         }
 
-        // 3. 终点爆炸范围伤害
         if (this.attacker != null && this.attacker.isAlive()) {
             float damage = (float) this.attacker.getAttributeValue(Attributes.ATTACK_DAMAGE) * 3.0F;
             AABB blastArea = this.getBoundingBox().inflate(4.0);
@@ -172,7 +160,6 @@ public class RepairMinecart extends Minecart {
             }
         }
 
-        // 4. 销毁矿车
         this.discard();
     }
 }

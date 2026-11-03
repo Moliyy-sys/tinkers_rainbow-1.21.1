@@ -12,7 +12,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import org.moliyy.tinkers_rainbow.Config;
+import org.moliyy.tinkers_rainbow.utils.ModifierInteractionHelper;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -26,11 +30,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+@EventBusSubscriber(modid = "tinkers_rainbow")
 public class HonorAndFaithModifier extends Modifier implements GeneralInteractionModifierHook {
 
-    private static final Map<UUID, Integer> JUMPING_PLAYERS = new HashMap<>();
-    private static final int COOLDOWN = 160;
-    private static final ResourceLocation COOLDOWN_KEY = ResourceLocation.fromNamespaceAndPath("tinkers_rainbow", "honor_faith_cooldown");
+    private static final Map<UUID, JumpData> JUMPING_PLAYERS = new HashMap<>();
+    private static final ResourceLocation COOLDOWN_KEY =
+            ResourceLocation.fromNamespaceAndPath("tinkers_rainbow", "honor_and_faith_cooldown");
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
@@ -42,13 +47,22 @@ public class HonorAndFaithModifier extends Modifier implements GeneralInteractio
                                        InteractionHand hand, InteractionSource source) {
         if (player.level().isClientSide || tool.isBroken()) return InteractionResult.PASS;
 
+        if (!ModifierInteractionHelper.isSelected(tool, modifier, player)) {
+            return InteractionResult.PASS;
+        }
+
         long currentTime = player.level().getGameTime();
         long lastUse = tool.getPersistentData().get(COOLDOWN_KEY, (tag, key) -> tag.getLong(key));
-        if (currentTime - lastUse < COOLDOWN) return InteractionResult.PASS;
+
+        if (lastUse > 0 && currentTime - lastUse < Config.COMMON.honorAndFaithCooldown.get()) {
+            return InteractionResult.FAIL;
+        }
 
         player.setDeltaMovement(player.getDeltaMovement().x, 1.2, player.getDeltaMovement().z);
         player.hurtMarked = true;
-        JUMPING_PLAYERS.put(player.getUUID(), modifier.getLevel());
+        player.resetFallDistance();
+
+        JUMPING_PLAYERS.put(player.getUUID(), new JumpData(modifier.getLevel(), currentTime + 200));
 
         tool.getPersistentData().put(COOLDOWN_KEY, LongTag.valueOf(currentTime));
         return InteractionResult.SUCCESS;
@@ -59,45 +73,36 @@ public class HonorAndFaithModifier extends Modifier implements GeneralInteractio
         if (!(event.getEntity() instanceof Player player)) return;
         if (player.level().isClientSide) return;
 
-        Integer level = JUMPING_PLAYERS.remove(player.getUUID());
-        if (level == null) return;
+        JumpData data = JUMPING_PLAYERS.remove(player.getUUID());
+        if (data == null) return;
 
-        float damage = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE) * 4.0F;
+        float damage = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE) *
+                Config.COMMON.honorAndFaithDamageMultiplier.get().floatValue();
+
         AABB area = player.getBoundingBox().inflate(4.0);
         for (LivingEntity entity : player.level().getEntitiesOfClass(LivingEntity.class, area,
                 e -> e != player && e.isAlive())) {
             entity.hurt(player.damageSources().playerAttack(player), damage);
         }
 
-        if (hasHonorAndFaith(player)) {
-            event.setCanceled(true);
+        event.setCanceled(true);
+        event.setDistance(0.0F);
+        player.resetFallDistance();
+    }
+
+    @SubscribeEvent
+    public static void onPlayerTick(PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
+        if (player.level().isClientSide) return;
+
+        JumpData data = JUMPING_PLAYERS.get(player.getUUID());
+        if (data != null) {
+
+            if (player.onGround() || player.level().getGameTime() > data.expireTime()) {
+                JUMPING_PLAYERS.remove(player.getUUID());
+            }
         }
     }
 
-    private static boolean hasHonorAndFaith(Player player) {
-
-        for (InteractionHand hand : InteractionHand.values()) {
-            ItemStack stack = player.getItemInHand(hand);
-            if (isToolWithModifier(stack)) return true;
-        }
-
-        for (EquipmentSlot slot : new EquipmentSlot[]{
-                EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET}) {
-            ItemStack stack = player.getItemBySlot(slot);
-            if (isToolWithModifier(stack)) return true;
-        }
-        return false;
-    }
-
-    private static boolean isToolWithModifier(ItemStack stack) {
-        if (stack.isEmpty()) return false;
-        try {
-            ToolStack tool = ToolStack.from(stack);
-
-            return tool.getModifierLevel(new HonorAndFaithModifier()) > 0;
-        } catch (Exception e) {
-
-            return false;
-        }
-    }
+    private record JumpData(int level, long expireTime) {}
 }

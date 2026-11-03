@@ -72,7 +72,6 @@ public class TinkersRainbow {
     public TinkersRainbow(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
-
         RainbowBlocks.BLOCKS.register(modEventBus);
         RainbowItems.ITEMS.register(modEventBus);
         RainbowFluids.FLUIDS.register(modEventBus);
@@ -85,19 +84,21 @@ public class TinkersRainbow {
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        modContainer.registerConfig(ModConfig.Type.CLIENT, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
 
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
+        if (Config.COMMON.logDirtBlock.get()) {
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
         }
 
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
+        LOGGER.info("{}{}", Config.COMMON.magicNumberIntroduction.get(), Config.COMMON.magicNumber.get());
 
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
+        Config.COMMON.itemStrings.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
 

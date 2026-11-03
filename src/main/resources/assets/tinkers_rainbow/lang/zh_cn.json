@@ -1,15 +1,6 @@
 {
   "itemGroup.tinkers_rainbow": "匠魂彩虹",
 
-  "tinkers_rainbow.configuration.title": "匠魂彩虹 配置",
-  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml": "匠魂彩虹 通用配置",
-  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml.title": "匠魂彩虹 通用配置",
-  "tinkers_rainbow.configuration.items": "物品列表",
-  "tinkers_rainbow.configuration.logDirtBlock": "记录泥土方块",
-  "tinkers_rainbow.configuration.magicNumberIntroduction": "魔法数字文本",
-  "tinkers_rainbow.configuration.magicNumber": "魔法数字",
-  "tinkers_rainbow.configuration.showStrengthBonus": "“见识我的实力吧”攻击力加成倍率（1.05 = 提升 5%）",
-
   "material.tinkers_rainbow.blue_steel": "蓝钢",
   "material.tinkers_rainbow.gene_metal": "基因金属",
   "material.tinkers_rainbow.aurora_crystal": "极光水晶",
@@ -153,5 +144,38 @@
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "深层蓝钢矿石",
   "block.tinkers_rainbow.blue_steel_block": "蓝钢块",
   "block.tinkers_rainbow.raw_blue_steel_block": "粗蓝钢块",
-  "block.tinkers_rainbow.blue_steel_debris": "蓝钢残骸"
+  "block.tinkers_rainbow.blue_steel_debris": "蓝钢残骸",
+
+  "tinkers_rainbow.configuration.title": "匠魂彩虹 配置",
+  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml": "匠魂彩虹 通用配置",
+  "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml.title": "匠魂彩虹 通用配置",
+  "tinkers_rainbow.configuration.section.client.toml.title": "客户端配置",
+  "tinkers_rainbow.configuration.items": "物品列表",
+  "tinkers_rainbow.configuration.logDirtBlock": "记录泥土方块",
+  "tinkers_rainbow.configuration.magicNumberIntroduction": "魔法数字文本",
+  "tinkers_rainbow.configuration.magicNumber": "魔法数字",
+  "tinkers_rainbow.configuration.showStrengthBonus": "“见识我的实力吧”攻击力加成倍率（1.05 = 提升 5%）",
+  "tinkers_rainbow.configuration.modifiers": "词条数值设置",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger": "芝士巧克力汉堡～",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger.gen_cooldown": "生成食物冷却 (tick)",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger.eat_cooldown": "自动进食冷却 (tick)",
+  "tinkers_rainbow.configuration.modifiers.cheesy_burger.heal_percentage": "回血百分比 (%)",
+  "tinkers_rainbow.configuration.modifiers.repair_cart": "得、得去修理才行……！",
+  "tinkers_rainbow.configuration.modifiers.repair_cart.cooldown": "冷却时间 (tick)",
+  "tinkers_rainbow.configuration.modifiers.repair_cart.damage_multiplier": "伤害倍率",
+  "tinkers_rainbow.configuration.modifiers.honor_and_faith": "荣誉与信念",
+  "tinkers_rainbow.configuration.modifiers.honor_and_faith.cooldown": "冷却时间 (tick)",
+  "tinkers_rainbow.configuration.modifiers.honor_and_faith.damage_multiplier": "伤害倍率",
+  "tinkers_rainbow.configuration.modifiers.support_sound_wave": "现、现在就来支援！",
+  "tinkers_rainbow.configuration.modifiers.support_sound_wave.cooldown": "冷却时间 (tick)",
+  "tinkers_rainbow.configuration.modifiers.support_sound_wave.damage_multiplier": "伤害倍率",
+  "tinkers_rainbow.configuration.modifiers.edict_of_investigation": "诏令：格物致知",
+  "tinkers_rainbow.configuration.modifiers.edict_of_investigation.attack_multiplier": "攻击力倍率",
+
+
+  "gui.tinkers_rainbow.hud_editor.title": "编辑冷却条 HUD",
+  "gui.tinkers_rainbow.hud_editor.instructions": "拖拽冷却条调整位置，按 ESC 保存并退出",
+
+  "key.categories.tinkers_rainbow": "匠魂彩虹",
+  "key.tinkers_rainbow.edit_hud": "编辑冷却条位置"
 }
