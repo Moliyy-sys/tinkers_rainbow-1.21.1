@@ -15,6 +15,8 @@
   "material.tinkers_rainbow.kisaki_ingot": "妃咲锭",
   "material.tinkers_rainbow.mine_ingot": "美弥锭",
   "material.tinkers_rainbow.hiyori_ingot": "日和锭",
+  "material.tinkers_rainbow.kurumi_ingot": "胡桃锭",
+  "material.tinkers_rainbow.tsukuyo_ingot": "月咏锭",
 
   "modifier.tinkers_rainbow.advance_fortune": "高级时运",
   "modifier.tinkers_rainbow.advance_fortune.flavor": "邦邦咔邦！爱丽丝获得矿石！",
@@ -90,6 +92,15 @@
   "modifier.tinkers_rainbow.edict_of_investigation.flavor": "探究万物，明理致知。",
   "modifier.tinkers_rainbow.edict_of_investigation.description": "提升50%攻击力，并提升工具上其他所有词条的等级（提升量等于本词条等级+1）。",
 
+  "modifier.tinkers_rainbow.moon_veil": "月咏流忍法...！",
+  "modifier.tinkers_rainbow.moon_veil.flavor": "将一切痛楚，化为月光的恩泽。",
+  "modifier.tinkers_rainbow.moon_veil.description": "受到伤害时，将伤害转化为20%的治疗量并免疫伤害，持续10秒，冷却30秒。",
+
+  "modifier.tinkers_rainbow.tactical_shield": "防护盾，展开!",
+  "modifier.tinkers_rainbow.tactical_shield.flavor": "铁壁防御展开!",
+  "modifier.tinkers_rainbow.tactical_shield.description": "穿戴时获得基于最大生命值430%的战术护盾，护盾存在时减伤40%并对攻击者造成基于最大护盾量10%的反伤。护盾破裂后进入120秒冷却。",
+
+
   "fluid.tinkers_rainbow.molten_blue_steel": "熔融蓝钢",
   "fluid.tinkers_rainbow.molten_gene_metal": "熔融基因金属",
   "fluid.tinkers_rainbow.molten_aurora_crystal": "熔融极光水晶",
@@ -104,6 +115,8 @@
   "fluid.tinkers_rainbow.molten_kisaki": "熔融妃咲锭",
   "fluid.tinkers_rainbow.molten_mine": "熔融美弥锭",
   "fluid.tinkers_rainbow.molten_hiyori": "熔融日和锭",
+  "fluid.tinkers_rainbow.molten_kurumi": "熔融胡桃锭",
+  "fluid.tinkers_rainbow.molten_tsukuyo": "熔融月咏锭",
 
   "item.tinkers_rainbow.blue_steel": "蓝钢锭",
   "item.tinkers_rainbow.blue_steel_nugget": "蓝钢粒",
@@ -124,6 +137,8 @@
   "item.tinkers_rainbow.kisaki_ingot": "妃咲锭",
   "item.tinkers_rainbow.mine_ingot": "美弥锭",
   "item.tinkers_rainbow.hiyori_ingot": "日和锭",
+  "item.tinkers_rainbow.kurumi_ingot": "胡桃锭",
+  "item.tinkers_rainbow.tsukuyo_ingot": "月咏锭",
 
   "item.tinkers_rainbow.molten_blue_steel_bucket": "熔融蓝钢桶",
   "item.tinkers_rainbow.molten_gene_metal_bucket": "熔融基因金属桶",
@@ -139,6 +154,8 @@
   "item.tinkers_rainbow.molten_kisaki_bucket": "熔融妃咲桶",
   "item.tinkers_rainbow.molten_mine_bucket": "熔融美弥桶",
   "item.tinkers_rainbow.molten_hiyori_bucket": "熔融日和桶",
+  "item.tinkers_rainbow.molten_kurumi_bucket": "熔融胡桃桶",
+  "item.tinkers_rainbow.molten_tsukuyo_bucket": "熔融月咏桶",
 
   "block.tinkers_rainbow.blue_steel_ore": "蓝钢矿石",
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "深层蓝钢矿石",

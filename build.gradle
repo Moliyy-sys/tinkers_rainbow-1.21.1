@@ -165,6 +165,8 @@ dependencies {
     implementation "blank:Mantle-${minecraft_version}:${mantle_version}"
     implementation "blank:tconjei-${minecraft_version}:${tconjei_version}"
     implementation "blank:neotaigarr-${minecraft_version}:${neotaigarr_version}"
+    implementation "blank:tinkerscalibration-${minecraft_version}:${tinkerscalibration_version}"
+    implementation "blank:TinkersConstructTool-${minecraft_version}:${tinkersconstructtool_version}"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

@@ -11,16 +11,25 @@ public class SyncUtils {
     public static void syncHand(Player player, InteractionHand hand) {
         if (player instanceof ServerPlayer sp) {
             ItemStack stack = player.getItemInHand(hand);
-            int slot = hand == InteractionHand.MAIN_HAND ? sp.getInventory().selected : 40;
-            sp.connection.send(new ClientboundContainerSetSlotPacket(-2, 0, slot, stack));
+            int slot = hand == InteractionHand.MAIN_HAND ? 36 + sp.getInventory().selected : 45;
+            sp.connection.send(new ClientboundContainerSetSlotPacket(0, 0, slot, stack));
         }
     }
 
     public static void syncArmor(Player player, EquipmentSlot slot) {
         if (player instanceof ServerPlayer sp) {
             ItemStack stack = player.getItemBySlot(slot);
-            int slotIndex = 36 + (3 - slot.getIndex());
-            sp.connection.send(new ClientboundContainerSetSlotPacket(-2, 0, slotIndex, stack));
+
+            int slotIndex = switch (slot) {
+                case HEAD -> 5;
+                case CHEST -> 6;
+                case LEGS -> 7;
+                case FEET -> 8;
+                default -> -1;
+            };
+            if (slotIndex != -1) {
+                sp.connection.send(new ClientboundContainerSetSlotPacket(0, 0, slotIndex, stack));
+            }
         }
     }
 }

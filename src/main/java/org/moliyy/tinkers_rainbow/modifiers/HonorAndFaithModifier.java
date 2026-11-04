@@ -14,7 +14,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.moliyy.tinkers_rainbow.Config;
+import org.moliyy.tinkers_rainbow.utils.ICooldownModifier;
 import org.moliyy.tinkers_rainbow.utils.ModifierInteractionHelper;
+import org.moliyy.tinkers_rainbow.utils.SyncUtils;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -28,7 +30,8 @@ import java.util.Map;
 import java.util.UUID;
 
 @EventBusSubscriber(modid = "tinkers_rainbow")
-public class HonorAndFaithModifier extends Modifier implements GeneralInteractionModifierHook {
+public class HonorAndFaithModifier extends Modifier implements
+        GeneralInteractionModifierHook, ICooldownModifier {
 
     private static final Map<UUID, JumpData> JUMPING_PLAYERS = new HashMap<>();
     private static final ResourceLocation COOLDOWN_KEY =
@@ -62,6 +65,9 @@ public class HonorAndFaithModifier extends Modifier implements GeneralInteractio
         JUMPING_PLAYERS.put(player.getUUID(), new JumpData(modifier.getLevel(), currentTime + 200));
 
         tool.getPersistentData().put(COOLDOWN_KEY, LongTag.valueOf(currentTime));
+
+        SyncUtils.syncHand(player, hand);
+
         return InteractionResult.SUCCESS;
     }
 
@@ -98,6 +104,16 @@ public class HonorAndFaithModifier extends Modifier implements GeneralInteractio
                 JUMPING_PLAYERS.remove(player.getUUID());
             }
         }
+    }
+
+    @Override
+    public ResourceLocation getCooldownKey() {
+        return COOLDOWN_KEY;
+    }
+
+    @Override
+    public int getCooldownTicks(IToolStackView tool, ModifierEntry modifier) {
+        return Config.COMMON.honorAndFaithCooldown.get();
     }
 
     private record JumpData(int level, long expireTime) {}

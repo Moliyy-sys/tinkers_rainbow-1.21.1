@@ -24,6 +24,8 @@
   "material.tinkers_rainbow.kisaki_ingot": "KISAKI Ingot",
   "material.tinkers_rainbow.mine_ingot": "MINE Ingot",
   "material.tinkers_rainbow.hiyori_ingot": "HIYORI Ingot",
+  "material.tinkers_rainbow.kurumi_ingot": "Kurumi Ingot",
+  "material.tinkers_rainbow.tsukuyo_ingot": "Tsukuyo Ingot",
 
   "modifier.tinkers_rainbow.advance_fortune": "Advanced Fortune",
   "modifier.tinkers_rainbow.advance_fortune.flavor": "Bang bang kira kira! Alice got ores!",
@@ -99,6 +101,13 @@
   "modifier.tinkers_rainbow.edict_of_investigation.flavor": "Explore all things, seek the truth.",
   "modifier.tinkers_rainbow.edict_of_investigation.description": "Increases attack damage by 50%, and increases the level of all other modifiers on the tool by (this modifier's level + 1).",
 
+  "modifier.tinkers_rainbow.moon_veil": "Tsukuyomi Ninpou...!",
+  "modifier.tinkers_rainbow.moon_veil.flavor": "Transform all pain into the grace of moonlight.",
+  "modifier.tinkers_rainbow.moon_veil.description": "Converts 20% of incoming damage into healing and grants immunity for 10 seconds. 30s cooldown.",
+
+  "modifier.tinkers_rainbow.tactical_shield": "Tactical Shield, Deploy!",
+  "modifier.tinkers_rainbow.tactical_shield.flavor": "Iron Wall Defense activated!",
+  "modifier.tinkers_rainbow.tactical_shield.description": "Grants a tactical shield equal to 430% of max health. While active, reduces incoming damage by 40% and reflects 10% of max shield as damage. Enters a 120s cooldown when the shield breaks.",
 
   "fluid.tinkers_rainbow.molten_blue_steel": "Molten Blue Steel",
   "fluid.tinkers_rainbow.molten_gene_metal": "Molten Gene Metal",
@@ -114,6 +123,8 @@
   "fluid.tinkers_rainbow.molten_kisaki": "Molten Kisaki Ingot",
   "fluid.tinkers_rainbow.molten_mine": "Molten Mine Ingot",
   "fluid.tinkers_rainbow.molten_hiyori": "Molten Hiyori Ingot",
+  "fluid.tinkers_rainbow.molten_kurumi": "Molten Kurumi Ingot",
+  "fluid.tinkers_rainbow.molten_tsukuyo": "Molten Tsukuyo Ingot",
 
   "item.tinkers_rainbow.blue_steel": "Blue Steel Ingot",
   "item.tinkers_rainbow.blue_steel_nugget": "Blue Steel Nugget",
@@ -134,6 +145,8 @@
   "item.tinkers_rainbow.kisaki_ingot": "Kisaki Ingot",
   "item.tinkers_rainbow.mine_ingot": "Mine Ingot",
   "item.tinkers_rainbow.hiyori_ingot": "Hiyori Ingot",
+  "item.tinkers_rainbow.kurumi_ingot": "Kurumi Ingot",
+  "item.tinkers_rainbow.tsukuyo_ingot": "Tsukuyo Ingot",
 
   "item.tinkers_rainbow.molten_blue_steel_bucket": "Molten Blue Steel Bucket",
   "item.tinkers_rainbow.molten_gene_metal_bucket": "Molten Gene Metal Bucket",
@@ -149,6 +162,8 @@
   "item.tinkers_rainbow.molten_kisaki_bucket": "Molten Kisaki Bucket",
   "item.tinkers_rainbow.molten_mine_bucket": "Molten Mine Bucket",
   "item.tinkers_rainbow.molten_hiyori_bucket": "Molten Hiyori Bucket",
+  "item.tinkers_rainbow.molten_kurumi_bucket": "Molten Kurumi Bucket",
+  "item.tinkers_rainbow.molten_tsukuyo_bucket": "Molten Tsukuyo Bucket",
 
   "block.tinkers_rainbow.blue_steel_ore": "Blue Steel Ore",
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "Deepslate Blue Steel Ore",

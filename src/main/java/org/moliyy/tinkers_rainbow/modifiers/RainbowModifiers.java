@@ -59,6 +59,12 @@ public class RainbowModifiers {
     public static final StaticModifier<EdictOfInvestigationModifier> edict_of_investigation =
             MODIFIERS.register("edict_of_investigation", EdictOfInvestigationModifier::new);
 
+    public static final StaticModifier<MoonVeilModifier> moon_veil =
+            MODIFIERS.register("moon_veil", MoonVeilModifier::new);
+
+    public static final StaticModifier<TacticalShieldModifier> tactical_shield =
+            MODIFIERS.register("tactical_shield", TacticalShieldModifier::new);
+
     public RainbowModifiers() {
     }
 

@@ -54,6 +54,12 @@ public class RainbowFluids {
     public static final FlowingFluidObject<BaseFlowingFluid> molten_hiyori =
             register("molten_hiyori", 1500, 10, 10000);
 
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_kurumi =
+            register("molten_kurumi", 1500, 10, 10000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_tsukuyo =
+            register("molten_tsukuyo", 1500, 10, 10000);
+
     public static final FlowingFluidObject<BaseFlowingFluid> molten_gene_metal =
             register("molten_gene_metal", 900, 10, 6000);
 

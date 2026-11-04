@@ -23,7 +23,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+        /*tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(RainbowBlocks.BLUE_STEEL_ORE.get())
                 .add(RainbowBlocks.BLUE_STEEL_DEEPSLATE_ORE.get())
                 .add(RainbowBlocks.BLUE_STEEL_BLOCK.get())
@@ -43,5 +43,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(Tags.Blocks.STORAGE_BLOCKS)
                 .add(RainbowBlocks.BLUE_STEEL_BLOCK.get());
+        */
     }
 }

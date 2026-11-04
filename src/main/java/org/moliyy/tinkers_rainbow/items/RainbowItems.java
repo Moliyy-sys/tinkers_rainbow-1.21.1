@@ -68,6 +68,12 @@ public class RainbowItems {
     public static final DeferredItem<Item> AIRI_INGOT =
             ITEMS.registerSimpleItem("airi_ingot");
 
+    public static final DeferredItem<Item> KURUMI_INGOT =
+            ITEMS.registerSimpleItem("kurumi_ingot");
+
+    public static final DeferredItem<Item> TSUKUYO_INGOT =
+            ITEMS.registerSimpleItem("tsukuyo_ingot");
+
     public static final DeferredItem<BlockItem> BLUE_STEEL_ORE_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_ore", RainbowBlocks.BLUE_STEEL_ORE);
 
