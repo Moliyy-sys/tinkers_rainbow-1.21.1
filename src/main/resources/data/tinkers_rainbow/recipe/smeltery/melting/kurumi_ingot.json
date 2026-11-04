@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:kurumi_ingot"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_kurumi",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 60
+}
