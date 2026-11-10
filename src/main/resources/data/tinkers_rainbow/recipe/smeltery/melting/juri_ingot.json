@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:juri_ingot"
+  },
+  "result": {
+    "fluid": "tinkers_rainbow:molten_juri",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 60
+}

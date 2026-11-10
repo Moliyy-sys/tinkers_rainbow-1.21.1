@@ -26,6 +26,7 @@
   "material.tinkers_rainbow.hiyori_ingot": "HIYORI Ingot",
   "material.tinkers_rainbow.kurumi_ingot": "Kurumi Ingot",
   "material.tinkers_rainbow.tsukuyo_ingot": "Tsukuyo Ingot",
+  "material.tinkers_rainbow.juri_ingot": "Juri Ingot",
 
   "modifier.tinkers_rainbow.advance_fortune": "Advanced Fortune",
   "modifier.tinkers_rainbow.advance_fortune.flavor": "Bang bang kira kira! Alice got ores!",
@@ -109,6 +110,20 @@
   "modifier.tinkers_rainbow.tactical_shield.flavor": "Iron Wall Defense activated!",
   "modifier.tinkers_rainbow.tactical_shield.description": "Grants a tactical shield equal to 430% of max health. While active, reduces incoming damage by 40% and reflects 10% of max shield as damage. Enters a 120s cooldown when the shield breaks.",
 
+  "modifier.tinkers_rainbow.dirt_scum": "Dirt Scum",
+  "modifier.tinkers_rainbow.dirt_scum.flavor": "Turn stones into bricks.",
+  "modifier.tinkers_rainbow.dirt_scum.description": "When mining clay blocks, gravel, or sand, replace the drops with charred bricks.",
+  "modifier.tinkers_rainbow.blue_steel_reinforcement": "Blue Steel Reinforcement",
+  "modifier.tinkers_rainbow.blue_steel_reinforcement.flavor": "As solid as a rock.",
+  "modifier.tinkers_rainbow.blue_steel_reinforcement.description": "Gain an additional upgrade slot.",
+  "modifier.tinkers_rainbow.strong_sword": "Strong Sword",
+  "modifier.tinkers_rainbow.strong_sword.flavor": "The more you fight, the stronger you become.",
+  "modifier.tinkers_rainbow.strong_sword.description": "For every 10 hostile mobs killed, attack damage increases by 0.1, up to a maximum of 10.",
+
+  "modifier.tinkers_rainbow.julie_cooking": "Julie's Cooking Time!",
+  "modifier.tinkers_rainbow.julie_cooking.flavor": "Try some freshly baked muffins!",
+  "modifier.tinkers_rainbow.julie_cooking.description": "Summons a Muffin upon equipping (Max 4). Muffins inflict poison on hit. Also greatly boosts all your tamed pets' health, damage, and speed.",
+
   "fluid.tinkers_rainbow.molten_blue_steel": "Molten Blue Steel",
   "fluid.tinkers_rainbow.molten_gene_metal": "Molten Gene Metal",
   "fluid.tinkers_rainbow.molten_aurora_crystal": "Molten Aurora Crystal",
@@ -125,6 +140,7 @@
   "fluid.tinkers_rainbow.molten_hiyori": "Molten Hiyori Ingot",
   "fluid.tinkers_rainbow.molten_kurumi": "Molten Kurumi Ingot",
   "fluid.tinkers_rainbow.molten_tsukuyo": "Molten Tsukuyo Ingot",
+  "fluid.tinkers_rainbow.molten_juri": "Molten Juri Ingot",
 
   "item.tinkers_rainbow.blue_steel": "Blue Steel Ingot",
   "item.tinkers_rainbow.blue_steel_nugget": "Blue Steel Nugget",
@@ -147,6 +163,7 @@
   "item.tinkers_rainbow.hiyori_ingot": "Hiyori Ingot",
   "item.tinkers_rainbow.kurumi_ingot": "Kurumi Ingot",
   "item.tinkers_rainbow.tsukuyo_ingot": "Tsukuyo Ingot",
+  "item.tinkers_rainbow.juri_ingot": "Juri Ingot",
 
   "item.tinkers_rainbow.molten_blue_steel_bucket": "Molten Blue Steel Bucket",
   "item.tinkers_rainbow.molten_gene_metal_bucket": "Molten Gene Metal Bucket",
@@ -164,6 +181,7 @@
   "item.tinkers_rainbow.molten_hiyori_bucket": "Molten Hiyori Bucket",
   "item.tinkers_rainbow.molten_kurumi_bucket": "Molten Kurumi Bucket",
   "item.tinkers_rainbow.molten_tsukuyo_bucket": "Molten Tsukuyo Bucket",
+  "item.tinkers_rainbow.molten_juri_bucket": "Molten Juri Bucket",
 
   "block.tinkers_rainbow.blue_steel_ore": "Blue Steel Ore",
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "Deepslate Blue Steel Ore",
@@ -188,6 +206,9 @@
   "tinkers_rainbow.configuration.modifiers.support_sound_wave.damage_multiplier": "Damage Multiplier",
   "tinkers_rainbow.configuration.modifiers.edict_of_investigation": "Edict: Investigation of Things",
   "tinkers_rainbow.configuration.modifiers.edict_of_investigation.attack_multiplier": "Attack Damage Multiplier",
+
+  "item.tinkers_rainbow.muffin_spawn_egg": "Muffin Spawn Egg",
+  "entity.tinkers_rainbow.muffin": "Muffin",
 
   "gui.tinkers_rainbow.hud_editor.title": "Edit Cooldown Bar HUD",
   "gui.tinkers_rainbow.hud_editor.instructions": "Drag the cooldown bar to adjust its position, press ESC to save and exit",

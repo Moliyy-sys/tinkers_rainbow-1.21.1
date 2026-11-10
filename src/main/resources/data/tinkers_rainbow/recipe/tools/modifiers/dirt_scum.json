@@ -1,0 +1,14 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    { "item": "minecraft:clay_ball" },
+    { "item": "minecraft:gravel" },
+    { "item": "minecraft:sand" },
+    { "item": "tconstruct:grout" },
+    { "item": "tconstruct:seared_brick" }
+  ],
+  "result": "tinkers_rainbow:dirt_scum",
+  "tools": { "tag": "tconstruct:modifiable/harvest" },
+  "max_level": 1
+}

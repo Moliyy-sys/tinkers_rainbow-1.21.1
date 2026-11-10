@@ -17,6 +17,7 @@
   "material.tinkers_rainbow.hiyori_ingot": "日和锭",
   "material.tinkers_rainbow.kurumi_ingot": "胡桃锭",
   "material.tinkers_rainbow.tsukuyo_ingot": "月咏锭",
+  "material.tinkers_rainbow.juri_ingot": "朱莉锭",
 
   "modifier.tinkers_rainbow.advance_fortune": "高级时运",
   "modifier.tinkers_rainbow.advance_fortune.flavor": "邦邦咔邦！爱丽丝获得矿石！",
@@ -100,6 +101,19 @@
   "modifier.tinkers_rainbow.tactical_shield.flavor": "铁壁防御展开!",
   "modifier.tinkers_rainbow.tactical_shield.description": "穿戴时获得基于最大生命值430%的战术护盾，护盾存在时减伤40%并对攻击者造成基于最大护盾量10%的反伤。护盾破裂后进入120秒冷却。",
 
+  "modifier.tinkers_rainbow.dirt_scum": "土渣",
+  "modifier.tinkers_rainbow.dirt_scum.flavor": "点石成砖。",
+  "modifier.tinkers_rainbow.dirt_scum.description": "挖掘黏土块、砂砾或沙子时，将掉落物替换为焦黑砖。",
+  "modifier.tinkers_rainbow.blue_steel_reinforcement": "蓝钢强化",
+  "modifier.tinkers_rainbow.blue_steel_reinforcement.flavor": "坚如磐石。",
+  "modifier.tinkers_rainbow.blue_steel_reinforcement.description": "额外获得一个升级强化槽。",
+  "modifier.tinkers_rainbow.strong_sword": "强剑",
+  "modifier.tinkers_rainbow.strong_sword.flavor": "越战越勇。",
+  "modifier.tinkers_rainbow.strong_sword.description": "每击杀10只敌对生物，攻击伤害+0.1，最高+10。",
+
+  "modifier.tinkers_rainbow.julie_cooking": "朱莉的烹饪时间！",
+  "modifier.tinkers_rainbow.julie_cooking.flavor": "来尝尝刚出炉的松饼吧！",
+  "modifier.tinkers_rainbow.julie_cooking.description": "穿戴时召唤一只松饼（最多4只）。松饼攻击会附加中毒。同时全方位增强你的所有宠物（血量、攻击力、速度按等级提升）。",
 
   "fluid.tinkers_rainbow.molten_blue_steel": "熔融蓝钢",
   "fluid.tinkers_rainbow.molten_gene_metal": "熔融基因金属",
@@ -117,6 +131,7 @@
   "fluid.tinkers_rainbow.molten_hiyori": "熔融日和锭",
   "fluid.tinkers_rainbow.molten_kurumi": "熔融胡桃锭",
   "fluid.tinkers_rainbow.molten_tsukuyo": "熔融月咏锭",
+  "fluid.tinkers_rainbow.molten_juri": "熔融朱莉锭",
 
   "item.tinkers_rainbow.blue_steel": "蓝钢锭",
   "item.tinkers_rainbow.blue_steel_nugget": "蓝钢粒",
@@ -139,6 +154,8 @@
   "item.tinkers_rainbow.hiyori_ingot": "日和锭",
   "item.tinkers_rainbow.kurumi_ingot": "胡桃锭",
   "item.tinkers_rainbow.tsukuyo_ingot": "月咏锭",
+  "item.tinkers_rainbow.juri_ingot": "朱莉锭",
+
 
   "item.tinkers_rainbow.molten_blue_steel_bucket": "熔融蓝钢桶",
   "item.tinkers_rainbow.molten_gene_metal_bucket": "熔融基因金属桶",
@@ -156,6 +173,7 @@
   "item.tinkers_rainbow.molten_hiyori_bucket": "熔融日和桶",
   "item.tinkers_rainbow.molten_kurumi_bucket": "熔融胡桃桶",
   "item.tinkers_rainbow.molten_tsukuyo_bucket": "熔融月咏桶",
+  "item.tinkers_rainbow.molten_juri_bucket": "熔融朱莉桶",
 
   "block.tinkers_rainbow.blue_steel_ore": "蓝钢矿石",
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "深层蓝钢矿石",
@@ -189,6 +207,8 @@
   "tinkers_rainbow.configuration.modifiers.edict_of_investigation": "诏令：格物致知",
   "tinkers_rainbow.configuration.modifiers.edict_of_investigation.attack_multiplier": "攻击力倍率",
 
+  "item.tinkers_rainbow.muffin_spawn_egg": "饼酱刷怪蛋",
+  "entity.tinkers_rainbow.muffin": "饼酱",
 
   "gui.tinkers_rainbow.hud_editor.title": "编辑冷却条 HUD",
   "gui.tinkers_rainbow.hud_editor.instructions": "拖拽冷却条调整位置，按 ESC 保存并退出",

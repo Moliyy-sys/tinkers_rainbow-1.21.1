@@ -10,26 +10,36 @@ import java.util.List;
 public class Config {
 
     public static final ModConfigSpec SPEC;
+
     public static final Common COMMON;
 
     static {
         Pair<Common, ModConfigSpec> pair = new ModConfigSpec.Builder().configure(Common::new);
+
         COMMON = pair.getLeft();
+
         SPEC = pair.getRight();
     }
 
     public static class Common {
 
         public final ModConfigSpec.IntValue cooldownBarX;
+
         public final ModConfigSpec.IntValue cooldownBarY;
+
         public final ModConfigSpec.IntValue shieldBarX;
+
         public final ModConfigSpec.IntValue shieldBarY;
 
 
         public final ModConfigSpec.BooleanValue logDirtBlock;
+
         public final ModConfigSpec.IntValue magicNumber;
+
         public final ModConfigSpec.ConfigValue<String> magicNumberIntroduction;
+
         public final ModConfigSpec.ConfigValue<List<? extends String>> itemStrings;
+
         public final ModConfigSpec.DoubleValue showStrengthBonus;
 
 
@@ -54,6 +64,9 @@ public class Config {
         public final ModConfigSpec.DoubleValue tacticalDamageReduction;
         public final ModConfigSpec.DoubleValue tacticalReflectPercentage;
 
+        public final ModConfigSpec.IntValue strongSwordKillsPerGroup;
+        public final ModConfigSpec.DoubleValue strongSwordDamagePerGroup;
+        public final ModConfigSpec.DoubleValue strongSwordMaxDamage;
         Common(ModConfigSpec.Builder builder) {
 
             logDirtBlock = builder.comment("Whether to log the dirt block on common setup").define("logDirtBlock", true);
@@ -123,6 +136,12 @@ public class Config {
             builder.comment("Shield Bar Settings").push("shield_bar");
             shieldBarX = builder.comment("The X position of the shield bar on screen").defineInRange("shieldBarX", -1, -1, 10000);
             shieldBarY = builder.comment("The Y position of the shield bar on screen").defineInRange("shieldBarY", -1, -1, 10000);
+            builder.pop();
+
+            builder.push("strong_sword");
+            strongSwordKillsPerGroup = builder.comment("Number of kills required to increase damage").defineInRange("kills_per_group", 10, 1, 10000);
+            strongSwordDamagePerGroup = builder.comment("Damage increase per group of kills").defineInRange("damage_per_group", 0.1, 0.0, 100.0);
+            strongSwordMaxDamage = builder.comment("Maximum damage bonus from this modifier").defineInRange("max_damage", 10.0, 0.0, 1000.0);
             builder.pop();
         }
 

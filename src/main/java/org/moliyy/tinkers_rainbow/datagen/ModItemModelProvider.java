@@ -56,6 +56,8 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         basicItem(RainbowItems.TSUKUYO_INGOT.get());
 
+        basicItem(RainbowItems.JURI_INGOT.get());
+
         withExistingParent("blue_steel_ore", modLoc("block/blue_steel_ore"));
 
         withExistingParent("blue_steel_deepslate_ore", modLoc("block/blue_steel_deepslate_ore"));

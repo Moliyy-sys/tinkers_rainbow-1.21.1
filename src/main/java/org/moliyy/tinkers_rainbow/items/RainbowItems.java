@@ -2,14 +2,18 @@ package org.moliyy.tinkers_rainbow.items;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.moliyy.tinkers_rainbow.TinkersRainbow;
 import org.moliyy.tinkers_rainbow.blocks.RainbowBlocks;
+import org.moliyy.tinkers_rainbow.entity.RainbowEntityTypes;
 
 public class RainbowItems {
 
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TinkersRainbow.MODID);
+    public static final DeferredRegister.Items ITEMS =
+            DeferredRegister.createItems(TinkersRainbow.MODID);
 
     public static final DeferredItem<Item> BLUE_STEEL_INGOT =
             ITEMS.registerSimpleItem("blue_steel");
@@ -74,6 +78,9 @@ public class RainbowItems {
     public static final DeferredItem<Item> TSUKUYO_INGOT =
             ITEMS.registerSimpleItem("tsukuyo_ingot");
 
+    public static final DeferredItem<Item> JURI_INGOT =
+            ITEMS.registerSimpleItem("juri_ingot");
+
     public static final DeferredItem<BlockItem> BLUE_STEEL_ORE_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_ore", RainbowBlocks.BLUE_STEEL_ORE);
 
@@ -86,5 +93,12 @@ public class RainbowItems {
 
     public static final DeferredItem<BlockItem> BLUE_STEEL_DEBRIS_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_debris", RainbowBlocks.BLUE_STEEL_DEBRIS);
+
+    public static final DeferredItem<SpawnEggItem> MUFFIN_SPAWN_EGG =
+            ITEMS.register("muffin_spawn_egg",
+            () -> new SpawnEggItem(
+                    RainbowEntityTypes.MUFFIN.get(), 0x8A2BE2,
+                    0x32CD32, new Item.Properties())
+    );
 
 }

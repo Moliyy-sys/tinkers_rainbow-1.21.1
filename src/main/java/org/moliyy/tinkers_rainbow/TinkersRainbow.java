@@ -4,6 +4,7 @@ import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import org.moliyy.tinkers_rainbow.blocks.RainbowBlocks;
 import org.moliyy.tinkers_rainbow.effects.RainbowEffects;
+import org.moliyy.tinkers_rainbow.entity.RainbowEntityTypes;
 import org.moliyy.tinkers_rainbow.fluids.RainbowFluids;
 import org.moliyy.tinkers_rainbow.items.RainbowItems;
 import org.moliyy.tinkers_rainbow.modifiers.HonorAndFaithModifier;
@@ -70,14 +71,22 @@ public class TinkersRainbow {
                     }).build());
 
     public TinkersRainbow(IEventBus modEventBus, ModContainer modContainer) {
+
         modEventBus.addListener(this::commonSetup);
 
         RainbowBlocks.BLOCKS.register(modEventBus);
+
         RainbowItems.ITEMS.register(modEventBus);
+
         RainbowFluids.FLUIDS.register(modEventBus);
+
         RainbowEffects.MOB_EFFECTS.register(modEventBus);
+
         CREATIVE_MODE_TABS.register(modEventBus);
+
         RainbowModifiers.init(modEventBus);
+
+        RainbowEntityTypes.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 

@@ -1,6 +1,8 @@
 {
   "type": "tconstruct:material",
-  "ingredient": { "item": "tinkers_rainbow:kurumi_ingot" },
+  "ingredient": {
+    "item": "tinkers_rainbow:kurumi_ingot"
+  },
   "value": 1,
   "needed": 1,
   "material": "tinkers_rainbow:kurumi_ingot"

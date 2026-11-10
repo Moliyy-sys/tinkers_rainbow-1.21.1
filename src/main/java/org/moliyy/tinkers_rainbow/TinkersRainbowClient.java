@@ -4,6 +4,7 @@ import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.entity.ItemEntityRenderer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -12,10 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
-import net.neoforged.neoforge.client.event.RenderGuiEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.client.settings.KeyConflictContext;
@@ -23,7 +21,10 @@ import net.neoforged.neoforge.common.NeoForge;
 import org.lwjgl.glfw.GLFW;
 import org.moliyy.tinkers_rainbow.client.CooldownHudRenderer;
 import org.moliyy.tinkers_rainbow.client.HudEditorScreen;
+import org.moliyy.tinkers_rainbow.client.MuffinRenderer;
 import org.moliyy.tinkers_rainbow.client.ShieldHudRenderer;
+import org.moliyy.tinkers_rainbow.entity.RainbowEntityTypes;
+import org.moliyy.tinkers_rainbow.model.MuffinModel;
 import org.moliyy.tinkers_rainbow.modifiers.RainbowModifiers;
 import org.moliyy.tinkers_rainbow.modifiers.TacticalShieldModifier;
 import org.moliyy.tinkers_rainbow.utils.ICooldownModifier;
@@ -182,6 +183,15 @@ public class TinkersRainbowClient {
                 cachedShield = cachedMaxShield;
             }
         }
+    }
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(RainbowEntityTypes.MUFFIN.get(), MuffinRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(MuffinModel.LAYER_LOCATION, MuffinModel::createBodyLayer);
     }
 
     public static void onRenderGui(RenderGuiEvent.Post event) {

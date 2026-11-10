@@ -32,6 +32,9 @@ public class RainbowModifiers {
     public static StaticModifier<Modifier> gene_boost =
             MODIFIERS.register("gene_boost", GeneBoostModifier::new);
 
+    public static StaticModifier<Modifier> dirt_scum =
+            MODIFIERS.register("dirt_scum", DirtScumModifier::new);
+
     public static StaticModifier<Modifier> show_strength =
             MODIFIERS.register("show_strength", ShowStrengthModifier::new);
 
@@ -64,6 +67,9 @@ public class RainbowModifiers {
 
     public static final StaticModifier<TacticalShieldModifier> tactical_shield =
             MODIFIERS.register("tactical_shield", TacticalShieldModifier::new);
+
+    public static final StaticModifier<JulieCookingModifier> julie_cooking =
+            MODIFIERS.register("julie_cooking", JulieCookingModifier::new);
 
     public RainbowModifiers() {
     }
