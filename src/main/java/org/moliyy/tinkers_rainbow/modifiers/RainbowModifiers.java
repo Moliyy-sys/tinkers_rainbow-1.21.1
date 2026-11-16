@@ -71,6 +71,9 @@ public class RainbowModifiers {
     public static final StaticModifier<JulieCookingModifier> julie_cooking =
             MODIFIERS.register("julie_cooking", JulieCookingModifier::new);
 
+    public static final StaticModifier<BigSisterModifier> big_sister =
+            MODIFIERS.register("big_sister", BigSisterModifier::new);
+
     public RainbowModifiers() {
     }
 

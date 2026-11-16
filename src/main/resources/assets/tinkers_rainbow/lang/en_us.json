@@ -27,6 +27,7 @@
   "material.tinkers_rainbow.kurumi_ingot": "Kurumi Ingot",
   "material.tinkers_rainbow.tsukuyo_ingot": "Tsukuyo Ingot",
   "material.tinkers_rainbow.juri_ingot": "Juri Ingot",
+  "material.tinkers_rainbow.rio_ingot": "RIO Ingot",
 
   "modifier.tinkers_rainbow.advance_fortune": "Advanced Fortune",
   "modifier.tinkers_rainbow.advance_fortune.flavor": "Bang bang kira kira! Alice got ores!",
@@ -124,6 +125,10 @@
   "modifier.tinkers_rainbow.julie_cooking.flavor": "Try some freshly baked muffins!",
   "modifier.tinkers_rainbow.julie_cooking.description": "Summons a Muffin upon equipping (Max 4). Muffins inflict poison on hit. Also greatly boosts all your tamed pets' health, damage, and speed.",
 
+  "modifier.tinkers_rainbow.big_sister": "Big Sister",
+  "modifier.tinkers_rainbow.big_sister.flavor": "One more time!",
+  "modifier.tinkers_rainbow.big_sister.description": "After a successful hit, immediately trigger a full attack effect on the target again.",
+
   "fluid.tinkers_rainbow.molten_blue_steel": "Molten Blue Steel",
   "fluid.tinkers_rainbow.molten_gene_metal": "Molten Gene Metal",
   "fluid.tinkers_rainbow.molten_aurora_crystal": "Molten Aurora Crystal",
@@ -141,6 +146,7 @@
   "fluid.tinkers_rainbow.molten_kurumi": "Molten Kurumi Ingot",
   "fluid.tinkers_rainbow.molten_tsukuyo": "Molten Tsukuyo Ingot",
   "fluid.tinkers_rainbow.molten_juri": "Molten Juri Ingot",
+  "fluid.tinkers_rainbow.molten_rio": "Molten RIO Ingot",
 
   "item.tinkers_rainbow.blue_steel": "Blue Steel Ingot",
   "item.tinkers_rainbow.blue_steel_nugget": "Blue Steel Nugget",
@@ -164,6 +170,7 @@
   "item.tinkers_rainbow.kurumi_ingot": "Kurumi Ingot",
   "item.tinkers_rainbow.tsukuyo_ingot": "Tsukuyo Ingot",
   "item.tinkers_rainbow.juri_ingot": "Juri Ingot",
+  "item.tinkers_rainbow.rio_ingot": "RIO Ingot",
 
   "item.tinkers_rainbow.molten_blue_steel_bucket": "Molten Blue Steel Bucket",
   "item.tinkers_rainbow.molten_gene_metal_bucket": "Molten Gene Metal Bucket",
@@ -182,12 +189,14 @@
   "item.tinkers_rainbow.molten_kurumi_bucket": "Molten Kurumi Bucket",
   "item.tinkers_rainbow.molten_tsukuyo_bucket": "Molten Tsukuyo Bucket",
   "item.tinkers_rainbow.molten_juri_bucket": "Molten Juri Bucket",
+  "item.tinkers_rainbow.molten_rio_bucket": "Molten RIO Bucket",
 
   "block.tinkers_rainbow.blue_steel_ore": "Blue Steel Ore",
   "block.tinkers_rainbow.blue_steel_deepslate_ore": "Deepslate Blue Steel Ore",
   "block.tinkers_rainbow.blue_steel_block": "Block of Blue Steel",
   "block.tinkers_rainbow.raw_blue_steel_block": "Block of Raw Blue Steel",
   "block.tinkers_rainbow.blue_steel_debris": "Blue Steel Debris",
+  "block.tinkers_rainbow.culture_chamber": "Culture Chamber",
 
   "tinkers_rainbow.configuration.section.client.toml.title": "Client Settings",
   "tinkers_rainbow.configuration.modifiers": "Modifiers Settings",

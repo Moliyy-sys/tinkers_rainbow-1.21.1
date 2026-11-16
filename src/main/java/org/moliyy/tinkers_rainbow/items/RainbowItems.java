@@ -39,14 +39,18 @@ public class RainbowItems {
     public static final DeferredItem<Item> GENE_METAL_NUGGET =
             ITEMS.registerSimpleItem("gene_metal_nugget");
 
-    public static final DeferredItem<Item> WAKAMO_INGOT =
-            ITEMS.registerSimpleItem("wakamo_ingot");
-
     public static final DeferredItem<Item> STARCORE_INGOT =
             ITEMS.registerSimpleItem("starcore_ingot");
 
+    public static final DeferredItem<Item> WAKAMO_INGOT =
+            ITEMS.registerSimpleItem("wakamo_ingot");
+
     public static final DeferredItem<Item> HIMARI_INGOT =
             ITEMS.registerSimpleItem("himari_ingot");
+
+    public static final DeferredItem<Item> RIO_INGOT =
+            ITEMS.registerSimpleItem("rio_ingot");
+
 
     public static final DeferredItem<Item> NODOKA_INGOT =
             ITEMS.registerSimpleItem("nodoka_ingot");

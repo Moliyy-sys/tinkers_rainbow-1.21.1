@@ -30,6 +30,10 @@ public class RainbowFluids {
     public static final FlowingFluidObject<BaseFlowingFluid> molten_himari =
             register("molten_himari", 1500, 10, 10000);
 
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_rio =
+            register("molten_rio", 1500, 10, 10000);
+
+
     public static final FlowingFluidObject<BaseFlowingFluid> molten_nodoka =
             register("molten_nodoka", 1500, 10, 10000);
 

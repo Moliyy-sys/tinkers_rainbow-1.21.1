@@ -16,6 +16,7 @@ public class RainbowEntityTypes {
             DeferredRegister.create(Registries.ENTITY_TYPE, TinkersRainbow.MODID);
 
 
+
     public static final DeferredHolder<EntityType<?>, EntityType<MuffinEntity>> MUFFIN = ENTITY_TYPES.register(
             "muffin",
             () -> EntityType.Builder.of(MuffinEntity::new, MobCategory.MISC)

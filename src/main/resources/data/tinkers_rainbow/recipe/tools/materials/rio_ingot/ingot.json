@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkers_rainbow:rio_ingot"
+  },
+  "material": "tinkers_rainbow:rio_ingot",
+  "needed": 1,
+  "value": 1
+}

@@ -18,6 +18,7 @@
   "material.tinkers_rainbow.kurumi_ingot": "胡桃锭",
   "material.tinkers_rainbow.tsukuyo_ingot": "月咏锭",
   "material.tinkers_rainbow.juri_ingot": "朱莉锭",
+  "material.tinkers_rainbow.rio_ingot": "莉音锭",
 
   "modifier.tinkers_rainbow.advance_fortune": "高级时运",
   "modifier.tinkers_rainbow.advance_fortune.flavor": "邦邦咔邦！爱丽丝获得矿石！",
@@ -115,6 +116,10 @@
   "modifier.tinkers_rainbow.julie_cooking.flavor": "来尝尝刚出炉的松饼吧！",
   "modifier.tinkers_rainbow.julie_cooking.description": "穿戴时召唤一只松饼（最多4只）。松饼攻击会附加中毒。同时全方位增强你的所有宠物（血量、攻击力、速度按等级提升）。",
 
+  "modifier.tinkers_rainbow.big_sister": "老大姐",
+  "modifier.tinkers_rainbow.big_sister.flavor": "再来一次！",
+  "modifier.tinkers_rainbow.big_sister.description": "攻击命中后，立即对目标再次触发一次完整的攻击效果。",
+
   "fluid.tinkers_rainbow.molten_blue_steel": "熔融蓝钢",
   "fluid.tinkers_rainbow.molten_gene_metal": "熔融基因金属",
   "fluid.tinkers_rainbow.molten_aurora_crystal": "熔融极光水晶",
@@ -132,6 +137,7 @@
   "fluid.tinkers_rainbow.molten_kurumi": "熔融胡桃锭",
   "fluid.tinkers_rainbow.molten_tsukuyo": "熔融月咏锭",
   "fluid.tinkers_rainbow.molten_juri": "熔融朱莉锭",
+  "fluid.tinkers_rainbow.molten_rio": "熔融莉音锭",
 
   "item.tinkers_rainbow.blue_steel": "蓝钢锭",
   "item.tinkers_rainbow.blue_steel_nugget": "蓝钢粒",
@@ -155,7 +161,7 @@
   "item.tinkers_rainbow.kurumi_ingot": "胡桃锭",
   "item.tinkers_rainbow.tsukuyo_ingot": "月咏锭",
   "item.tinkers_rainbow.juri_ingot": "朱莉锭",
-
+  "item.tinkers_rainbow.rio_ingot": "莉音锭",
 
   "item.tinkers_rainbow.molten_blue_steel_bucket": "熔融蓝钢桶",
   "item.tinkers_rainbow.molten_gene_metal_bucket": "熔融基因金属桶",
@@ -180,6 +186,7 @@
   "block.tinkers_rainbow.blue_steel_block": "蓝钢块",
   "block.tinkers_rainbow.raw_blue_steel_block": "粗蓝钢块",
   "block.tinkers_rainbow.blue_steel_debris": "蓝钢残骸",
+
 
   "tinkers_rainbow.configuration.title": "匠魂彩虹 配置",
   "tinkers_rainbow.configuration.section.tinkers_rainbow.common.toml": "匠魂彩虹 通用配置",

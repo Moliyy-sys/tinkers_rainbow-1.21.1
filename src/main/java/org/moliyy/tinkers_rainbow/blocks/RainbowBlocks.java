@@ -10,7 +10,8 @@ import org.moliyy.tinkers_rainbow.TinkersRainbow;
 
 public class RainbowBlocks {
 
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TinkersRainbow.MODID);
+    public static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(TinkersRainbow.MODID);
 
 
     public static final DeferredBlock<Block> BLUE_STEEL_ORE = BLOCKS.registerSimpleBlock(

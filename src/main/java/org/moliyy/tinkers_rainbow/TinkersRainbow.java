@@ -1,6 +1,8 @@
 package org.moliyy.tinkers_rainbow;
 
 import net.minecraft.world.item.Items;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import org.moliyy.tinkers_rainbow.blocks.RainbowBlocks;
 import org.moliyy.tinkers_rainbow.effects.RainbowEffects;

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_rio"
+  },
+  "output": "tinkers_rainbow:rio_ingot",
+  "temperature": 1500
+}
