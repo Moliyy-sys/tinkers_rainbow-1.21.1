@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 100,
+    "fluid": "tinkers_rainbow:molten_eligma"
+  },
+  "output": "tinkers_rainbow:eligma",
+  "temperature": 900
+}

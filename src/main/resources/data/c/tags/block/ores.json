@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "#c:ores/blue_steel"
+    "#c:ores/blue_steel",
+    "#c:ores/eligma",
+    "#c:ores/pyroxenes",
+    "#c:ores/orange_gem",
+    "#c:ores/chromatic_node",
+    "#c:ores/marine_orb"
   ]
 }

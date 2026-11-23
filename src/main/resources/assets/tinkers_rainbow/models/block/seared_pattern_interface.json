@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tinkers_rainbow:block/seared_pattern_interface"
+  }
+}

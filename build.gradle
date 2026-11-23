@@ -168,6 +168,11 @@ dependencies {
     implementation "blank:tinkerscalibration-${minecraft_version}:${tinkerscalibration_version}"
     implementation "blank:TinkersConstructTool-${minecraft_version}:${tinkersconstructtool_version}"
 
+    implementation "curse.maven:guideme-1173950:9366366"
+    implementation "curse.maven:applied-energistics-2-223794:9676922"
+
+    implementation "curse.maven:jade-324717:8591319"
+    implementation "curse.maven:ldlib-626676:9495128"
 
     implementation "curse.maven:mmmmmmmmmmmm-225738:8903254"
     implementation "curse.maven:selene-499980:9519534"

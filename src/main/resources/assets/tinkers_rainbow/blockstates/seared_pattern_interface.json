@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "in_structure=false": {
+      "model": "tinkers_rainbow:block/seared_pattern_interface"
+    },
+    "in_structure=true": {
+      "model": "tinkers_rainbow:block/seared_pattern_interface_active"
+    }
+  }
+}

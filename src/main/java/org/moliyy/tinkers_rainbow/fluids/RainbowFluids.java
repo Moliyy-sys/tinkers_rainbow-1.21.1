@@ -76,6 +76,21 @@ public class RainbowFluids {
     public static final FlowingFluidObject<BaseFlowingFluid> molten_starcore_ingot =
             register("molten_starcore_ingot", 800, 8, 6000);
 
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_eligma =
+            register("molten_eligma", 900, 8, 8000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_pyroxenes =
+            register("molten_pyroxenes", 900, 8, 8000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_orange_gem =
+            register("molten_orange_gem", 900, 8, 8000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_chromatic_node =
+            register("molten_chromatic_node", 900, 8, 8000);
+
+    public static final FlowingFluidObject<BaseFlowingFluid> molten_marine_orb =
+            register("molten_marine_orb", 900, 8, 8000);
+
 
 
 

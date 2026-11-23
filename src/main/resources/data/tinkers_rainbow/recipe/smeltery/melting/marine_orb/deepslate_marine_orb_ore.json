@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:deepslate_marine_orb_ore"
+  },
+  "result": {
+    "amount": 300,
+    "fluid": "tinkers_rainbow:molten_marine_orb"
+  },
+  "temperature": 900,
+  "time": 158
+}

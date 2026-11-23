@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "parts": [
+    {
+      "path": "tinkers_rainbow:item/tool/gravity_gun/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkers_rainbow:item/tool/gravity_gun/adze",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkers_rainbow:item/tool/gravity_gun/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "tinkers_rainbow:item/tool/gravity_gun/handle",
+      "stat_type": "tconstruct:handle"
+    }
+  ]
+}

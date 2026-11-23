@@ -1,0 +1,69 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Calculating task graph as no cached configuration is available for tasks: compileJava
+
+> Task :createMinecraftArtifacts
+Loaded 145 artifacts from E:\jsafaj\lianxiJAVA\tinkersrainbow-template-1.21.1\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadJson[23;0m[23;0m
+ [1m[92mDONE [23;0m Completed [4mdownloadJson[23;0m in 0.02s
+[1m*** Started working on [4mdownloadServer[23;0m[23;0m
+[1m*** Started working on [4mdownloadClientMappings[23;0m[23;0m
+[1m*** Started working on [4mdownloadClient[23;0m[23;0m
+ [1m[92mDONE [23;0m Completed [4mdownloadClientMappings[23;0m in 0.03s
+ [1m[92mDONE [23;0m Completed [4mdownloadServer[23;0m in 0.03s
+ [1m[92mDONE [23;0m Completed [4mdownloadClient[23;0m in 0.03s
+[1m*** Started working on [4mmergeMappings[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mmergeMappings[23;0m in 0.00s
+[1m*** Started working on [4mstripClient[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mstripClient[23;0m in 0.00s
+[1m*** Started working on [4mextractServer[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mextractServer[23;0m in 0.00s
+[1m*** Started working on [4mstripServer[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mstripServer[23;0m in 0.00s
+[1m*** Started working on [4mmerge[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mmerge[23;0m in 0.00s
+[1m*** Started working on [4mrename[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mrename[23;0m in 0.00s
+[1m*** Started working on [4mdecompile[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mdecompile[23;0m in 0.00s
+[1m*** Started working on [4minject[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4minject[23;0m in 0.00s
+[1m*** Started working on [4mpatch[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mpatch[23;0m in 0.00s
+[1m*** Started working on [4mapplyNeoforgePatches[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mapplyNeoforgePatches[23;0m in 0.00s
+[1m*** Started working on [4mtransformSources[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mtransformSources[23;0m in 0.00s
+[1m*** Started working on [4mrecompile[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mrecompile[23;0m in 0.00s
+[1m*** Started working on [4msourcesWithNeoForge[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4msourcesWithNeoForge[23;0m in 0.00s
+[1m*** Started working on [4mcompiledWithNeoForge[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4mcompiledWithNeoForge[23;0m in 0.01s
+[1m*** Started working on [4msourcesAndCompiledWithNeoForge[23;0m[23;0m
+ [1m[92mREUSE[23;0m Used cache of [4msourcesAndCompiledWithNeoForge[23;0m in 0.00s
+Performing periodic cache maintenance on C:\Users\...\.gradle\caches\neoformruntime
+Cleaning intermediate results cache in C:\Users\...\.gradle\caches\neoformruntime\intermediate_results
+ Maximum age: 744h
+ Maximum cache size: 10 GiB
+ [0;2;3m66 files found[23;0m
+ [0;2;3m392 MiB overall size[23;0m
+ [0;2;3m13 expired keys found[23;0m
+Freed up [1m180 MiB[23;0m by deleting [1m31 expired entries[23;0m
+[0;2;3m Deleted 17 outdated lock files
+Total runtime: 4.93s
+
+
+> Task :compileJava UP-TO-DATE
+
+[Incubating] Problems report is available at: file:///E:/jsafaj/lianxiJAVA/tinkersrainbow-template-1.21.1/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 47s
+2 actionable tasks: 1 executed, 1 up-to-date
+Configuration cache entry stored.

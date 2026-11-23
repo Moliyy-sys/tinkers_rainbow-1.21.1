@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "tinkers_rainbow:deepslate_chromatic_node_ore"
+  },
+  "result": {
+    "id": "tinkers_rainbow:chromatic_node"
+  }
+}

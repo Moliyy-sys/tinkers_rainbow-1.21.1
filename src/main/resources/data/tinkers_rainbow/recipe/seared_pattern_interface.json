@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "ae2:quartz_fiber"
+    },
+    "L": {
+      "item": "ae2:logic_processor"
+    },
+    "S": {
+      "item": "tconstruct:seared_brick"
+    }
+  },
+  "pattern": [
+    "SQS",
+    "SLS",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tinkers_rainbow:seared_pattern_interface"
+  }
+}

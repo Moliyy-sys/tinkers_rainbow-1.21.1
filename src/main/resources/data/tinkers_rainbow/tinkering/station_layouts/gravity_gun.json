@@ -1,0 +1,46 @@
+{
+  "translation_key": "item.tinkers_rainbow.gravity_gun",
+  "icon": {
+    "item": "tinkers_rainbow:gravity_gun",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 30,
+  "input_slots": [
+    {
+      "icon": "tconstruct:adze_head",
+      "translation_key": "item.tconstruct.adze_head",
+      "x": 25,
+      "y": 20,
+      "filter": {
+        "item": "tconstruct:adze_head"
+      }
+    },
+    {
+      "icon": "tconstruct:pick_head",
+      "translation_key": "item.tconstruct.pick_head",
+      "x": 44,
+      "y": 29,
+      "filter": {
+        "item": "tconstruct:pick_head"
+      }
+    },
+    {
+      "icon": "tconstruct:tool_binding",
+      "translation_key": "item.tconstruct.tool_binding",
+      "x": 21,
+      "y": 52,
+      "filter": {
+        "item": "tconstruct:tool_binding"
+      }
+    },
+    {
+      "icon": "tconstruct:tough_handle",
+      "translation_key": "item.tconstruct.tough_handle",
+      "x": 50,
+      "y": 48,
+      "filter": {
+        "item": "tconstruct:tough_handle"
+      }
+    }
+  ]
+}

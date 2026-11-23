@@ -92,6 +92,14 @@ versionRange="[1.13.0,)"
 ordering="AFTER"
 side="BOTH"
 
+# Applied Energistics 2 is optional: the seared pattern interface is only registered when AE2 is installed.
+[[dependencies.tinkers_rainbow]]
+modId="ae2"
+type="optional"
+versionRange="[19.2.0,)"
+ordering="AFTER"
+side="BOTH"
+
 # Features are specific properties of the game environment, that you may want to declare you require.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"

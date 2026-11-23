@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:chromatic_node_ore"
+  },
+  "result": {
+    "amount": 300,
+    "fluid": "tinkers_rainbow:molten_chromatic_node"
+  },
+  "temperature": 900,
+  "time": 158
+}

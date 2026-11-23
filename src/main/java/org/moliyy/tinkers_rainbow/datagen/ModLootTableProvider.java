@@ -39,7 +39,9 @@ public class ModLootTableProvider extends LootTableProvider {
                     createOreDrop(RainbowBlocks.BLUE_STEEL_DEEPSLATE_ORE.get(), RainbowItems.RAW_BLUE_STEEL.get()));
 
             dropSelf(RainbowBlocks.BLUE_STEEL_BLOCK.get());
+
             dropSelf(RainbowBlocks.BLUE_STEEL_DEBRIS.get());
+
         }
 
         @Override

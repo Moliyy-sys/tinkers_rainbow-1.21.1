@@ -1,0 +1,22 @@
+{
+  "values": [
+    "tinkers_rainbow:blue_steel_ore",
+    "tinkers_rainbow:blue_steel_deepslate_ore",
+    "tinkers_rainbow:blue_steel_block",
+    "tinkers_rainbow:blue_steel_debris",
+    {
+      "id": "tinkers_rainbow:seared_pattern_interface",
+      "required": false
+    },
+    "tinkers_rainbow:eligma_ore",
+    "tinkers_rainbow:deepslate_eligma_ore",
+    "tinkers_rainbow:pyroxenes_ore",
+    "tinkers_rainbow:deepslate_pyroxenes_ore",
+    "tinkers_rainbow:orange_gem_ore",
+    "tinkers_rainbow:deepslate_orange_gem_ore",
+    "tinkers_rainbow:chromatic_node_ore",
+    "tinkers_rainbow:deepslate_chromatic_node_ore",
+    "tinkers_rainbow:marine_orb_ore",
+    "tinkers_rainbow:deepslate_marine_orb_ore"
+  ]
+}

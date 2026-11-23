@@ -39,6 +39,22 @@ public class TinkersRainbow {
     public static final String MODID = "tinkers_rainbow";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    /** True when Applied Energistics 2 is installed at runtime; the AE2 integration is optional. */
+    private static final boolean AE2_LOADED = detectAe2();
+
+    public static boolean isAe2Loaded() {
+        return AE2_LOADED;
+    }
+
+    private static boolean detectAe2() {
+        try {
+            Class.forName("appeng.api.stacks.AEKey", false, TinkersRainbow.class.getClassLoader());
+            return true;
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
@@ -51,10 +67,14 @@ public class TinkersRainbow {
 
                         RainbowItems.ITEMS.getEntries().forEach(entry -> {
                             var item = entry.get();
-                            if (item != Items.AIR) {
+                            if (item != Items.AIR
+                                    && !(item instanceof org.moliyy.tinkers_rainbow.items.GravityGunItem)) {
                                 output.accept(item);
                             }
                         });
+
+                        // the gravity gun is only useful with materials, so add a prebuilt stack
+                        output.accept(org.moliyy.tinkers_rainbow.items.GravityGunItems.createCreativeStack());
 
                         RainbowBlocks.BLOCKS.getEntries().forEach(entry -> {
                             var item = entry.get().asItem();
@@ -80,6 +100,11 @@ public class TinkersRainbow {
 
         RainbowItems.ITEMS.register(modEventBus);
 
+        // ensure the gravity gun item gets registered before the registry events fire
+        org.moliyy.tinkers_rainbow.items.GravityGunItems.GRAVITY_GUN.getId();
+
+        org.moliyy.tinkers_rainbow.utils.GravityGunHandler.init();
+
         RainbowFluids.FLUIDS.register(modEventBus);
 
         RainbowEffects.MOB_EFFECTS.register(modEventBus);
@@ -93,6 +118,13 @@ public class TinkersRainbow {
         NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
+
+        if (AE2_LOADED) {
+            org.moliyy.tinkers_rainbow.integration.ae2.Ae2Integration.init(modEventBus);
+            LOGGER.info("Applied Energistics 2 detected, seared pattern interface enabled");
+        } else {
+            LOGGER.info("Applied Energistics 2 not detected, seared pattern interface disabled");
+        }
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:eligma_ore"
+  },
+  "result": {
+    "amount": 300,
+    "fluid": "tinkers_rainbow:molten_eligma"
+  },
+  "temperature": 900,
+  "time": 158
+}

@@ -70,6 +70,14 @@ public class TinkersRainbowClient {
         event.register(EDIT_HUD_KEY);
     }
 
+    @SubscribeEvent
+    static void registerMenuScreens(RegisterMenuScreensEvent event) {
+        if (!TinkersRainbow.isAe2Loaded()) {
+            return;
+        }
+        org.moliyy.tinkers_rainbow.integration.ae2.client.Ae2ClientIntegration.registerScreens(event);
+    }
+
     public static void onKeyInput(InputEvent.Key event) {
         if (EDIT_HUD_KEY.consumeClick()) {
             Minecraft.getInstance().setScreen(new HudEditorScreen());

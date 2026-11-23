@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 100,
+    "fluid": "tinkers_rainbow:molten_chromatic_node"
+  },
+  "output": "tinkers_rainbow:chromatic_node",
+  "temperature": 900
+}

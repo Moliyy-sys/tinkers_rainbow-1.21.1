@@ -1,0 +1,7 @@
+Processing slimeknights.tconstruct.common.multiblock.IMasterLogic
+Processing slimeknights.tconstruct.common.multiblock.IServantLogic
+Processing slimeknights.tconstruct.smeltery.block.entity.CastingBlockEntity
+Processing slimeknights.tconstruct.smeltery.block.entity.component.SmelteryComponentBlockEntity
+Processing slimeknights.tconstruct.smeltery.block.entity.controller.HeatingStructureBlockEntity
+Processing slimeknights.tconstruct.smeltery.block.entity.module.MeltingModuleInventory
+Processing slimeknights.tconstruct.smeltery.block.entity.tank.ISmelteryTankHandler

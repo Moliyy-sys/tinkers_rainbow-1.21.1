@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "#tinkers_rainbow:ores/blue_steel"
+    "#tinkers_rainbow:ores/blue_steel",
+    "#tinkers_rainbow:ores/eligma",
+    "#tinkers_rainbow:ores/pyroxenes",
+    "#tinkers_rainbow:ores/orange_gem",
+    "#tinkers_rainbow:ores/chromatic_node",
+    "#tinkers_rainbow:ores/marine_orb"
   ]
 }

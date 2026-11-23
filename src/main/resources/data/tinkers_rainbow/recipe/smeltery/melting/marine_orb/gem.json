@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:marine_orb"
+  },
+  "result": {
+    "amount": 100,
+    "fluid": "tinkers_rainbow:molten_marine_orb"
+  },
+  "temperature": 900,
+  "time": 79
+}

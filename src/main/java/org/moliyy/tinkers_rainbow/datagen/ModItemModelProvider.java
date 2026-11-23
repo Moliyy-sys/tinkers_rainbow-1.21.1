@@ -22,7 +22,6 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         basicItem(RainbowItems.AURORA_CRYSTAL.get());
 
-        basicItem(RainbowItems.BLUE_STEEL_HEART_FRAGMENTS.get());
 
         basicItem(RainbowItems.BLUE_STEEL_SCRAP.get());
 
@@ -59,6 +58,10 @@ public class ModItemModelProvider extends ItemModelProvider{
         basicItem(RainbowItems.JURI_INGOT.get());
 
         basicItem(RainbowItems.RIO_INGOT.get());
+
+        basicItem(RainbowItems.PYROXENES.get());
+
+        basicItem(RainbowItems.ELIGMA.get());
 
         withExistingParent("blue_steel_ore", modLoc("block/blue_steel_ore"));
 

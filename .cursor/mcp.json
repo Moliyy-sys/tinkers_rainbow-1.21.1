@@ -2,6 +2,17 @@
   "mcpServers": {
     "blockbench": {
       "url": "http://127.0.0.1:3939/mcp"
+    },
+    "jetbrains": {
+      "command": "E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\jbr\\bin\\java",
+      "args": [
+        "-classpath",
+        "E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\plugins\\mcpserver\\lib\\mcpserver-frontend.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\util-8.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.ktor.client.cio.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.ktor.client.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.ktor.network.tls.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.ktor.io.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.ktor.utils.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.kotlinx.io.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.kotlinx.serialization.core.jar;E:\\IDEA\\IntelliJ IDEA 2025.3.1.1\\lib\\module-intellij.libraries.kotlinx.serialization.json.jar",
+        "com.intellij.mcpserver.stdio.McpStdioRunnerKt"
+      ],
+      "env": {
+        "IJ_MCP_SERVER_PORT": "64342"
+      }
     }
   }
 }

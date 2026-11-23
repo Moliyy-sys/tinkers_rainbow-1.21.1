@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkers_rainbow:pyroxenes_ore"
+  },
+  "result": {
+    "amount": 300,
+    "fluid": "tinkers_rainbow:molten_pyroxenes"
+  },
+  "temperature": 900,
+  "time": 158
+}

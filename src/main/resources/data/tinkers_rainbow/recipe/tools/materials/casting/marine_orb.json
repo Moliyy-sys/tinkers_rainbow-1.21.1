@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 100,
+    "fluid": "tinkers_rainbow:molten_marine_orb"
+  },
+  "output": "tinkers_rainbow:marine_orb",
+  "temperature": 900
+}
