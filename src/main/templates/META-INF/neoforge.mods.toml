@@ -63,7 +63,7 @@ modId="neoforge" #mandatory
 # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
 type="required" #mandatory
 # The version range of the dependency
-versionRange="[21.1.264,)" #mandatory
+versionRange="[21.1.250,)" #mandatory
 # An ordering relationship for the dependency.
 ordering="NONE"
 # Side this dependency is applied on - BOTH, CLIENT, or SERVER

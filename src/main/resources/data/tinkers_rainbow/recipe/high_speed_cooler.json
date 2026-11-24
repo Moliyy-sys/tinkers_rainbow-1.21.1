@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "tconstruct:seared_drain"
+    },
+    "T": {
+      "item": "tconstruct:seared_table"
+    },
+    "B": {
+      "item": "tconstruct:seared_basin"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "TDB",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tinkers_rainbow:high_speed_cooler"
+  }
+}

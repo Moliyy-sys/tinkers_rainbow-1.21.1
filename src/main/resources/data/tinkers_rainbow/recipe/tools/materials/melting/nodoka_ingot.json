@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkers_rainbow:nodoka_ingot",
+  "result": {
+    "amount": 90,
+    "fluid": "tinkers_rainbow:molten_nodoka"
+  },
+  "temperature": 1500
+}

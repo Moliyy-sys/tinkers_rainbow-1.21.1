@@ -5,23 +5,15 @@
       "modid": "ae2"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "Q": {
-      "item": "ae2:quartz_fiber"
+  "ingredients": [
+    {
+      "item": "ae2:interface"
     },
-    "L": {
-      "item": "ae2:logic_processor"
-    },
-    "S": {
-      "item": "tconstruct:seared_brick"
+    {
+      "item": "tinkers_rainbow:high_speed_cooler"
     }
-  },
-  "pattern": [
-    "SQS",
-    "SLS",
-    "SSS"
   ],
   "result": {
     "count": 1,

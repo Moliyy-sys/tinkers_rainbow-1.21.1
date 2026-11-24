@@ -17,6 +17,10 @@
     "tinkers_rainbow:chromatic_node_ore",
     "tinkers_rainbow:deepslate_chromatic_node_ore",
     "tinkers_rainbow:marine_orb_ore",
-    "tinkers_rainbow:deepslate_marine_orb_ore"
+    "tinkers_rainbow:deepslate_marine_orb_ore",
+    {
+      "id": "tinkers_rainbow:high_speed_cooler",
+      "required": false
+    }
   ]
 }

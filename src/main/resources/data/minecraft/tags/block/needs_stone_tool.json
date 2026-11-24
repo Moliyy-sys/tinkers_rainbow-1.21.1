@@ -3,6 +3,10 @@
     {
       "id": "tinkers_rainbow:seared_pattern_interface",
       "required": false
+    },
+    {
+      "id": "tinkers_rainbow:high_speed_cooler",
+      "required": false
     }
   ]
 }

@@ -72,6 +72,9 @@ public class TinkersRainbowClient {
 
     @SubscribeEvent
     static void registerMenuScreens(RegisterMenuScreensEvent event) {
+        // the high speed cooler works without AE2
+        event.register(org.moliyy.tinkers_rainbow.cooler.CoolerRegistry.HIGH_SPEED_COOLER_MENU.get(),
+                org.moliyy.tinkers_rainbow.cooler.client.HighSpeedCoolerScreen::new);
         if (!TinkersRainbow.isAe2Loaded()) {
             return;
         }

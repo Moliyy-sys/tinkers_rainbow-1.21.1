@@ -67,14 +67,10 @@ public class TinkersRainbow {
 
                         RainbowItems.ITEMS.getEntries().forEach(entry -> {
                             var item = entry.get();
-                            if (item != Items.AIR
-                                    && !(item instanceof org.moliyy.tinkers_rainbow.items.GravityGunItem)) {
+                            if (item != Items.AIR) {
                                 output.accept(item);
                             }
                         });
-
-                        // the gravity gun is only useful with materials, so add a prebuilt stack
-                        output.accept(org.moliyy.tinkers_rainbow.items.GravityGunItems.createCreativeStack());
 
                         RainbowBlocks.BLOCKS.getEntries().forEach(entry -> {
                             var item = entry.get().asItem();
@@ -90,20 +86,20 @@ public class TinkersRainbow {
                             }
                         });
 
+                        output.accept(org.moliyy.tinkers_rainbow.cooler.CoolerRegistry.HIGH_SPEED_COOLER_ITEM.get());
+
                     }).build());
 
     public TinkersRainbow(IEventBus modEventBus, ModContainer modContainer) {
 
         modEventBus.addListener(this::commonSetup);
 
+        // GUI -> server sync for the seared pattern interface output limit
+        modEventBus.addListener(org.moliyy.tinkers_rainbow.smeltery.SearedControlPayload::register);
+
         RainbowBlocks.BLOCKS.register(modEventBus);
 
         RainbowItems.ITEMS.register(modEventBus);
-
-        // ensure the gravity gun item gets registered before the registry events fire
-        org.moliyy.tinkers_rainbow.items.GravityGunItems.GRAVITY_GUN.getId();
-
-        org.moliyy.tinkers_rainbow.utils.GravityGunHandler.init();
 
         RainbowFluids.FLUIDS.register(modEventBus);
 
@@ -114,6 +110,8 @@ public class TinkersRainbow {
         RainbowModifiers.init(modEventBus);
 
         RainbowEntityTypes.register(modEventBus);
+
+        org.moliyy.tinkers_rainbow.cooler.CoolerRegistry.init(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 

@@ -1,8 +1,8 @@
 {
   "type": "tconstruct:alloy",
   "inputs": [
-    { "amount": 90, "fluid": "tconstruct:molten_orange_gem"},
-    { "amount": 270, "fluid": "tconstruct:molten_marine_orb" },
+    { "amount": 90, "fluid": "tinkers_rainbow:molten_orange_gem"},
+    { "amount": 270, "fluid": "tinkers_rainbow:molten_marine_orb" },
     { "amount": 270, "fluid": "tinkers_rainbow:molten_blue_steel" }
   ],
   "result": { "amount": 90, "fluid": "tinkers_rainbow:molten_starcore_ingot" },
