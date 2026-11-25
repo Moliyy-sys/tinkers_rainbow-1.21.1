@@ -1,7 +1,0 @@
-Processing slimeknights.tconstruct.library.recipe.casting.CastingRecipeLookup
-Processing slimeknights.tconstruct.library.recipe.casting.ICastingRecipe
-Processing slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipe
-Processing slimeknights.tconstruct.smeltery.TinkerSmeltery
-Processing slimeknights.tconstruct.smeltery.block.entity.CastingBlockEntity
-Processing slimeknights.tconstruct.smeltery.block.entity.controller.SmelteryBlockEntity
-Processing slimeknights.tconstruct.smeltery.block.entity.tank.SmelteryTank
