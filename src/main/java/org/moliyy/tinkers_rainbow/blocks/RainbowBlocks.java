@@ -16,7 +16,6 @@ public class RainbowBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(TinkersRainbow.MODID);
 
-    /** All gem ore blocks, used for tags and worldgen registration checks. */
     public static final List<DeferredBlock<Block>> GEM_ORES = new ArrayList<>();
 
 
@@ -36,18 +35,6 @@ public class RainbowBlocks {
             "blue_steel_block", BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL).strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL));
-
-    public static final DeferredBlock<Block> BLUE_STEEL_DEBRIS =
-            BLOCKS.register("blue_steel_debris",
-                    () -> new Block(BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.COLOR_BLUE)
-                            .strength(30.0F, 1200.0F)
-                            .requiresCorrectToolForDrops()
-                            .sound(SoundType.NETHERITE_BLOCK)));
-
-    // ------------------------------------------------------------------
-    // gem ores
-    // ------------------------------------------------------------------
 
     public static final DeferredBlock<Block> ELIGMA_ORE = registerOre("eligma_ore", MapColor.COLOR_PURPLE, false);
     public static final DeferredBlock<Block> DEEPSLATE_ELIGMA_ORE = registerOre("deepslate_eligma_ore", MapColor.DEEPSLATE, true);

@@ -1,5 +1,6 @@
 package org.moliyy.tinkers_rainbow.items;
 
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SpawnEggItem;
@@ -27,9 +28,6 @@ public class RainbowItems {
     public static final DeferredItem<Item> AURORA_CRYSTAL =
             ITEMS.registerSimpleItem("aurora_crystal");
 
-    public static final DeferredItem<Item> BLUE_STEEL_SCRAP =
-            ITEMS.registerSimpleItem("blue_steel_scrap");
-
     public static final DeferredItem<Item> GENE_METAL =
             ITEMS.registerSimpleItem("gene_metal");
 
@@ -53,9 +51,6 @@ public class RainbowItems {
 
     public static final DeferredItem<Item> MARINE_ORB =
             ITEMS.registerSimpleItem("marine_orb");
-
-
-
 
     public static final DeferredItem<Item> WAKAMO_INGOT =
             ITEMS.registerSimpleItem("wakamo_ingot");
@@ -99,6 +94,32 @@ public class RainbowItems {
     public static final DeferredItem<Item> JURI_INGOT =
             ITEMS.registerSimpleItem("juri_ingot");
 
+
+     public static final DeferredItem<Item> ORANGE =
+             ITEMS.register("orange",
+                     () -> new Item(new Item.Properties()
+                             .food(new FoodProperties.Builder()
+                                     .nutrition(2)
+                                     .saturationModifier(0.5f)
+                                     .build())));
+
+    public static final DeferredItem<Item> ORANGE_SEGMENTS =
+            ITEMS.register("orange_segments",
+                    () -> new Item(new Item.Properties()
+                            .food(new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.2f)
+                                    .build())));
+
+    public static final DeferredItem<Item> APPLE_SLICES =
+            ITEMS.register("apple_slices",
+                    () -> new Item(new Item.Properties()
+                            .food(new FoodProperties.Builder()
+                                    .nutrition(1)
+                                    .saturationModifier(0.5f)
+                                    .build())));
+
+
     public static final DeferredItem<BlockItem> BLUE_STEEL_ORE_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_ore", RainbowBlocks.BLUE_STEEL_ORE);
 
@@ -107,10 +128,6 @@ public class RainbowItems {
 
     public static final DeferredItem<BlockItem> BLUE_STEEL_BLOCK_ITEM =
             ITEMS.registerSimpleBlockItem("blue_steel_block", RainbowBlocks.BLUE_STEEL_BLOCK);
-
-
-    public static final DeferredItem<BlockItem> BLUE_STEEL_DEBRIS_ITEM =
-            ITEMS.registerSimpleBlockItem("blue_steel_debris", RainbowBlocks.BLUE_STEEL_DEBRIS);
 
     public static final DeferredItem<BlockItem> ELIGMA_ORE_ITEM =
             ITEMS.registerSimpleBlockItem("eligma_ore", RainbowBlocks.ELIGMA_ORE);

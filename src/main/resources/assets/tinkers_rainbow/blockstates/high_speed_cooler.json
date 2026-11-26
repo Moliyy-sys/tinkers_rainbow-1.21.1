@@ -1,6 +1,9 @@
 {
   "variants": {
-    "": {
+    "in_structure=false": {
+      "model": "tinkers_rainbow:block/high_speed_cooler"
+    },
+    "in_structure=true": {
       "model": "tinkers_rainbow:block/high_speed_cooler"
     }
   }

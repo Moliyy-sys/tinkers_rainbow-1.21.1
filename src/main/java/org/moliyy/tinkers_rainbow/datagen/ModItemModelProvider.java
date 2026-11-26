@@ -22,9 +22,6 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         basicItem(RainbowItems.AURORA_CRYSTAL.get());
 
-
-        basicItem(RainbowItems.BLUE_STEEL_SCRAP.get());
-
         basicItem(RainbowItems.GENE_METAL.get());
 
         basicItem(RainbowItems.GENE_METAL_NUGGET.get());
@@ -68,8 +65,6 @@ public class ModItemModelProvider extends ItemModelProvider{
         withExistingParent("blue_steel_deepslate_ore", modLoc("block/blue_steel_deepslate_ore"));
 
         withExistingParent("blue_steel_block", modLoc("block/blue_steel_block"));
-
-        withExistingParent("blue_steel_debris", modLoc("block/blue_steel_debris"));
 
     }
 }

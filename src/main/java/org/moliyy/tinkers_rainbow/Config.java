@@ -23,6 +23,9 @@ public class Config {
 
     public static class Common {
 
+        /** Client side GUI theme: true = dark textures, false = light textures. */
+        public final ModConfigSpec.BooleanValue useDarkGui;
+
         public final ModConfigSpec.IntValue cooldownBarX;
 
         public final ModConfigSpec.IntValue cooldownBarY;
@@ -68,6 +71,9 @@ public class Config {
         public final ModConfigSpec.DoubleValue strongSwordDamagePerGroup;
         public final ModConfigSpec.DoubleValue strongSwordMaxDamage;
         Common(ModConfigSpec.Builder builder) {
+
+            useDarkGui = builder.comment("Use dark GUI textures instead of light ones")
+                    .define("useDarkGui", true);
 
             logDirtBlock = builder.comment("Whether to log the dirt block on common setup").define("logDirtBlock", true);
             magicNumber = builder.comment("A magic number").defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);

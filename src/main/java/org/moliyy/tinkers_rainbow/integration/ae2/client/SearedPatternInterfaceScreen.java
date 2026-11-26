@@ -2,10 +2,8 @@ package org.moliyy.tinkers_rainbow.integration.ae2.client;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-import org.moliyy.tinkers_rainbow.TinkersRainbow;
 import org.moliyy.tinkers_rainbow.integration.ae2.SearedPatternInterfaceMenu;
 import org.moliyy.tinkers_rainbow.smeltery.client.AbstractSearedOutputScreen;
 
@@ -14,12 +12,9 @@ import org.moliyy.tinkers_rainbow.smeltery.client.AbstractSearedOutputScreen;
  *
  * <p>Shows the output-mode row (fluid / basin / table), the transfer-mode row (auto / block / manual), the
  * numeric limit input with the MAX and apply buttons and the manual return button. Reuses the shared
- * {@link AbstractSearedOutputScreen} logic.</p>
+ * {@link AbstractSearedOutputScreen} logic, including the live dark/light theme toggle.</p>
  */
 public class SearedPatternInterfaceScreen extends AbstractSearedOutputScreen<SearedPatternInterfaceMenu> {
-
-    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
-            TinkersRainbow.MODID, "textures/gui/seared_pattern_interface.png");
 
     public SearedPatternInterfaceScreen(SearedPatternInterfaceMenu menu, Inventory playerInventory,
                                         Component title) {
@@ -32,18 +27,18 @@ public class SearedPatternInterfaceScreen extends AbstractSearedOutputScreen<Sea
     }
 
     @Override
-    protected void init() {
-        super.init();
-        int x = this.leftPos;
-        addOutputModeButtons(x, 18);
-        addTransferModeButtons(x, 40);
-        addLimitBox(x, 114);
-        addManualButton(x, 134, 120);
+    protected String getGuiTextureName() {
+        return "seared_pattern_interface";
     }
 
     @Override
-    protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
-        guiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
+    protected void init() {
+        super.init();
+        // offsets are relative to the GUI origin; the base screen re-anchors them every frame
+        addOutputModeButtons(0, 18);
+        addTransferModeButtons(0, 40);
+        addLimitBox(0, 114);
+        addManualButton(0, 134, 120);
     }
 
     @Override
@@ -57,11 +52,5 @@ public class SearedPatternInterfaceScreen extends AbstractSearedOutputScreen<Sea
         guiGraphics.drawString(this.font,
                 Component.translatable("gui.tinkers_rainbow.seared_output.slot.cast"),
                 126, 66, 0xAAAAAA, false);
-    }
-
-    @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
-        super.render(guiGraphics, mouseX, mouseY, partialTick);
-        this.renderTooltip(guiGraphics, mouseX, mouseY);
     }
 }

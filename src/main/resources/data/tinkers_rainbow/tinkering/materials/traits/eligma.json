@@ -1,3 +1,30 @@
 {
-  "default": []
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:dwarven"
+    },
+    {
+      "level": 1,
+      "name": "tinkers_rainbow:rare_gem"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tconstruct:depth_protection"
+      }
+    ],
+    "tconstruct:skull": [
+      {
+        "level": 2,
+        "name": "tconstruct:respiration"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:drowned_disguise"
+      }
+    ]
+  }
 }

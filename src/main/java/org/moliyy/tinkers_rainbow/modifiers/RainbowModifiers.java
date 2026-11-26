@@ -29,6 +29,21 @@ public class RainbowModifiers {
     public static StaticModifier<Modifier> star_source =
             MODIFIERS.register("star_source", StarSourceModifier::new);
 
+    public static StaticModifier<Modifier> orangeGem =
+            MODIFIERS.register("orange_gem", OrangeGemModifier::new);
+
+    public static StaticModifier<Modifier> mechanicalRotation =
+            MODIFIERS.register("mechanical_rotation", MechanicalRotationModifier::new);
+
+    public static StaticModifier<Modifier> tide =
+            MODIFIERS.register("tide", TideModifier::new);
+
+    public static StaticModifier<Modifier> rareOre =
+            MODIFIERS.register("rare_gem", RareGemModifier::new);
+
+    public static StaticModifier<Modifier> oreFactor =
+            MODIFIERS.register("gem_factor", GemFactorModifier::new);
+
     public static StaticModifier<Modifier> gene_boost =
             MODIFIERS.register("gene_boost", GeneBoostModifier::new);
 

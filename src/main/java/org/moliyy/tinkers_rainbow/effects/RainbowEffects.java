@@ -34,4 +34,10 @@ public class RainbowEffects {
 
     public static final Holder<MobEffect> SUPPORT_DEBUFF =
             MOB_EFFECTS.register("support_debuff", SupportDebuffEffect::new);
+
+    public static final DeferredHolder<MobEffect, MobEffect> MECHANICAL_ROTATION =
+            MOB_EFFECTS.register("mechanical_rotation", MechanicalRotationEffect::new);
+
+    public static final DeferredHolder<MobEffect, MobEffect> TIDE_DROWNING =
+            MOB_EFFECTS.register("tide_drowning", TideDrowningEffect::new);
 }
